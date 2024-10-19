@@ -1,10 +1,11 @@
 import { useTheme } from "../../ThemeContext";
 import "./ModeSwitch.modules.css";
 
-const ModeSwitch = () => {
+//eslint-disable-next-line
+const ModeSwitch = ({ classNames }) => {
   const { theme, toggleTheme } = useTheme();
   return (
-    <div>
+    <div className={classNames}>
       <label className="ui-switch" data-color="black">
         <input
           type="checkbox"
