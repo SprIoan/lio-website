@@ -21,6 +21,7 @@ const Header = () => {
   );
 
   const menuRef = useRef();
+  const toggleRef = useRef();
 
   useGSAP(
     (context, contextSafe) => {
@@ -120,11 +121,11 @@ const Header = () => {
       });
 
       //add event listener
-      menuRef.current.addEventListener("click", onToggleMenu);
+      toggleRef.current.addEventListener("click", onToggleMenu);
 
       return () => {
         //remove event listener
-        menuRef.current.removeEventListener("click", onToggleMenu);
+        toggleRef.current.removeEventListener("click", onToggleMenu);
       };
     },
     { scope: menuRef }
@@ -134,28 +135,39 @@ const Header = () => {
     <header>
       <div className="absolute z-[999] w-full flex justify-between items-center px-6 py-2 pr-10 ">
         <Logo />
+
         <div className="flex flex-row gap-10">
-          <ModeSwitch classNames="my-auto" />
-          <div className="menu-toggle closed" ref={menuRef}>
-            <div className="menu-toggle-icon">
-              <div className="hamburger">
-                <div className="menu-bar" data-position="top"></div>
-                <div className="menu-bar" data-position="bottom"></div>
+          <div
+            className="menu-toggle closed bg-[rgba(255, 255, 255, 0.6)] dark:bg-transparent"
+            ref={menuRef}
+          >
+            <div
+              ref={toggleRef}
+              className="flex justify-center items-center cursor-pointer"
+            >
+              <div className="menu-toggle-icon border dark:border-0">
+                <div className="hamburger">
+                  <div className="menu-bar" data-position="top"></div>
+                  <div className="menu-bar" data-position="bottom"></div>
+                </div>
+              </div>
+              <div className="menu-copy">
+                <p className="text-black dark:text-white">Menu</p>
               </div>
             </div>
-            <div className="menu-copy">
-              <p>Menu</p>
-            </div>
 
-            <div className="menu bg-[#DDB888] dark:bg-[#0f0f0f]">
-              <div className="col col-1">
-                <div className="menu-logo">
+            <div className="menu bg-[#DDB888] dark:bg-[#0f0f0f] transition-colors duration-1000">
+              <div className="col col-1 ">
+                <div className="menu-logo mr-auto relative">
                   <Logo />
+                  <ModeSwitch classNames="absolute -right-20 top-[50%] translate-y-[-50%]" />
                 </div>
 
                 <div className="links">
-                  <div className="link">
-                    <a>Projects</a>
+                  <div className="link ">
+                    <a className="hover:text-black dark:hover:text-[#DDB888] transition-colors">
+                      Projects
+                    </a>
                   </div>
                   <div className="link">
                     <a>Expertise</a>

@@ -3,11 +3,12 @@
     width: 125px;
     height: 60px;
     border-radius: 8em;
-    background-color: black;
     transition: width 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     transform-origin: right;
-    cursor: pointer;
     z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .menu-toggle.opened{
@@ -19,7 +20,6 @@
     top:50%;
     left:30px;
     transform: translateY(-50%);
-    color:white;
     transition: left 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     z-index: 1;
 }
@@ -27,7 +27,7 @@
 .menu-copy p{
     text-transform: uppercase;
     font-weight: 700;
-    font-size:12px;
+    font-size: 13px;
     margin:0;
     padding: 0;
 }
@@ -46,7 +46,7 @@
     width: 60px;
     height:60px;
     border-radius: 100%;
-    clip-path: circle(10% at 50% 50%);
+    clip-path: circle(15% at 50% 50%);
     background-color: burlywood;
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     z-index: 10;
@@ -137,7 +137,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+}
 
+.col-1{
+    padding-top: 0.6em;
+    padding-left: 1.5em;
+    align-items: center;    
 }
 
 .link{
@@ -153,7 +158,9 @@
     font-weight: 300;
     letter-spacing: -1.5px;
     line-height: 125%;
+    cursor: pointer;
 }
+
 
 .video-wrapper {
     width: 100%;
