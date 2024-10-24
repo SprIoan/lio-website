@@ -8,16 +8,17 @@ export const BoxesCore = ({ className, ...rest }) => {
   const rows = new Array(150).fill(1);
   const cols = new Array(100).fill(1);
   let colors = [
-    "--sky-300",
-    "--pink-300",
-    "--green-300",
-    "--yellow-300",
-    "--red-300",
-    "--purple-300",
-    "--blue-300",
-    "--indigo-300",
-    "--violet-300",
+    "--sky-400",
+    "--pink-400",
+    "--green-400",
+    "--yellow-400",
+    "--red-400",
+    "--purple-400",
+    "--blue-400",
+    "--indigo-400",
+    "--violet-400",
   ];
+
   const getRandomColor = () => {
     return colors[Math.floor(Math.random() * colors.length)];
   };
@@ -40,12 +41,16 @@ export const BoxesCore = ({ className, ...rest }) => {
         >
           {cols.map((_, j) => (
             <motion.div
-              whileHover={{
+              initial={{
                 backgroundColor: `var(${getRandomColor()})`,
-                transition: { duration: 0 },
               }}
-              animate={{
-                transition: { duration: 2 },
+              transition={{
+                delay: 1,
+                duration: 2.5,
+              }}
+              whileHover={{
+                backgroundColor: `${"lightgray"}`,
+                transition: { duration: 0 },
               }}
               key={`col` + j}
               className="w-16 h-8  border-r border-t border-slate-700 relative"
