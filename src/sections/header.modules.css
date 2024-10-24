@@ -62,8 +62,13 @@
     transform: scale(1.125);
 }
 
+.mode-switch {
+    will-change: transform, opacity, height, width; /* Or any other property that changes */
+  }
+
 .hamburger {
     position: absolute;
+    border-radius: 100%;
     top:60%;
     left:50%;
     transform: translate(-50%, -50%);
@@ -145,29 +150,40 @@
     align-items: center;    
 }
 
+.links {
+    display: flex;
+    flex-direction: column;
+    gap:0.5vh;
+
+}
+
 .link{
     position: relative;
     transform: translateY(30px);
     opacity: 0;
+
 }
 
 .link a {
     text-decoration: none;
     color: #fff;
-    font-size: 48px;
+    font-size: 54px;
     font-weight: 300;
     letter-spacing: -1.5px;
     line-height: 125%;
     cursor: pointer;
+    user-select: none;
+
 }
 
 
 .video-wrapper {
     width: 100%;
-    aspect-ratio: 16/9;
+    aspect-ratio: 18/9;
     background-color: #1d1d1d;
     overflow: hidden;
-    padding: 0.5em;
+    padding: 0.3em;
+    display: none;
     clip-path: (0% 100%, 100% 100%, 100% 100%, 0% 100%);
 }
 
@@ -181,6 +197,7 @@
     width: 50%;
     display: flex;
     gap:2em;   
+
 }
 
 .socials .sub-col {
@@ -234,20 +251,33 @@
     .col-1 {
         flex: 2;
         align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2em;
     }
 
     .link a {
-        font-size: 30px;
+        font-size: 40px;
+    }
+
+    .links {
+        margin-top: 4vh;
+        display: flex;
+        flex-direction: column;
+        gap:3vh;
     }
 
     .video-wrapper {
-        padding: 0.4em;
+        position: absolute;
+        bottom: 10vh;
+        margin: auto;
+        width: 90vw
     }
 
     .socials {
+        margin-top: 4vh;
         width: 100%;
         flex-direction: column;
-        gap:8em;
+        gap:3em;
     }
 
     .header h1 {

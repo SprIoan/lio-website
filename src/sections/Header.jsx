@@ -4,21 +4,33 @@ import "./header.modules.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { CustomEase } from "gsap/CustomEase";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 
 const Header = () => {
   const { theme } = useTheme();
   const [isAnimating, setIsAnimating] = useState(false);
 
-  const Logo = () => (
-    <a>
-      {theme === "light" ? (
-        <img src="/images/lio-light.png" width={126} height={55} alt="Xora" />
-      ) : (
-        <img src="/images/lio-dark.png" width={130} height={55} alt="Xora" />
-      )}
-    </a>
-  );
+  const Logo = () => {
+    useEffect(() => {
+      const lightLogo = new Image();
+      lightLogo.src = "/images/lio-light.png";
+      const darkLogo = new Image();
+      darkLogo.src = "/images/lio-dark.png";
+    }, []);
+
+    return (
+      <a>
+        <img
+          src={
+            theme === "light" ? "/images/lio-light.png" : "/images/lio-dark.png"
+          }
+          width={140}
+          height={55}
+          alt="Xora"
+        />
+      </a>
+    );
+  };
 
   const menuRef = useRef();
   const toggleRef = useRef();
@@ -72,6 +84,7 @@ const Header = () => {
 
           gsap.to(".video-wrapper", {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
+            display: "flex",
             ease: "hop",
             duration: 1.5,
             delay: 0.5,
@@ -145,7 +158,7 @@ const Header = () => {
               ref={toggleRef}
               className="flex justify-center items-center cursor-pointer"
             >
-              <div className="menu-toggle-icon border dark:border-0">
+              <div className="menu-toggle-icon">
                 <div className="hamburger">
                   <div className="menu-bar" data-position="top"></div>
                   <div className="menu-bar" data-position="bottom"></div>
@@ -160,23 +173,29 @@ const Header = () => {
               <div className="col col-1 ">
                 <div className="menu-logo mr-auto relative">
                   <Logo />
-                  <ModeSwitch classNames="absolute -right-20 top-[50%] translate-y-[-50%]" />
+                  <ModeSwitch classNames="mode-switch absolute -right-24 sm:-right-20 top-[50%] translate-y-[-50%] z-[999] transition-all" />
                 </div>
 
                 <div className="links">
-                  <div className="link ">
-                    <a className="hover:text-black dark:hover:text-[#DDB888] transition-colors">
+                  <div className="link">
+                    <a className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors">
                       Projects
                     </a>
                   </div>
                   <div className="link">
-                    <a>Expertise</a>
+                    <a className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors">
+                      Expertise
+                    </a>
                   </div>
                   <div className="link">
-                    <a>About</a>
+                    <a className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors">
+                      About
+                    </a>
                   </div>
                   <div className="link">
-                    <a>Contact</a>
+                    <a className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors">
+                      Contact
+                    </a>
                   </div>
                 </div>
 
@@ -206,7 +225,7 @@ const Header = () => {
                     <p>210 9999000</p>
                   </div>
                 </div>
-                <div className="header">
+                <div className="header hidden sm:flex">
                   <h1>
                     <span>L</span>
                     <span>I</span>
