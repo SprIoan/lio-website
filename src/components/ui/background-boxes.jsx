@@ -52,6 +52,10 @@ export const BoxesCore = ({ className, ...rest }) => {
                 backgroundColor: `${"lightgray"}`,
                 transition: { duration: 0 },
               }}
+              whileTap={{
+                backgroundColor: `${"lightgray"}`,
+                transition: { duration: 0 },
+              }}
               key={`col` + j}
               className="w-16 h-8  border-r border-t border-slate-700 relative"
             >
