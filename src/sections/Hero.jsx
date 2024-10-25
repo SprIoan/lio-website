@@ -15,14 +15,14 @@ const Hero = () => {
       >
         <div
           className={`absolute inset-0 w-full h-full ${
-            theme == "light" ? "bg-white" : "bg-slate-900"
+            theme == "light" ? "bg-white/30" : "bg-slate-900"
           }  z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none transition-colors duration-700`}
         />
 
         <Boxes />
         <h1
           className={cn(
-            `md:text-6xl text-3xl font-semibold ${
+            `md:text-6xl text-3xl font-semibold z-0 pointer-events-none ${
               theme == "light" ? "text-black" : "text-white"
             } relative z-20`
           )}
@@ -30,7 +30,7 @@ const Hero = () => {
           Welcome to Lio Tech
         </h1>
         <p
-          className={`text-center text-lg md:text-2xl mt-2 ${
+          className={`text-center text-lg md:text-2xl mt-2 pointer-events-none ${
             theme == "light" ? "text-gray-600" : "text-gray-300"
           } relative z-20`}
         >

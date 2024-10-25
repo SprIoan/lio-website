@@ -19,7 +19,7 @@ const Header = () => {
     }, []);
 
     return (
-      <a>
+      <a href="#">
         <img
           src={
             theme === "light" ? "/images/lio-light.png" : "/images/lio-dark.png"
@@ -178,22 +178,34 @@ const Header = () => {
 
                 <div className="links">
                   <div className="link">
-                    <a className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors"
+                    >
                       Projects
                     </a>
                   </div>
                   <div className="link">
-                    <a className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors"
+                    >
                       Expertise
                     </a>
                   </div>
                   <div className="link">
-                    <a className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors"
+                    >
                       About
                     </a>
                   </div>
                   <div className="link">
-                    <a className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors">
+                    <a
+                      href="#"
+                      className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors"
+                    >
                       Contact
                     </a>
                   </div>

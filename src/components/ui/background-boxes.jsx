@@ -5,9 +5,19 @@ import { cn } from "../../lib/utils";
 
 //eslint-disable-next-line
 export const BoxesCore = ({ className, ...rest }) => {
-  const rows = new Array(150).fill(1);
-  const cols = new Array(100).fill(1);
+  const rows = new Array(58).fill(1);
+  const cols = new Array(45).fill(1);
   let colors = [
+    "",
+    "--sky-400",
+    "--pink-400",
+    "--green-400",
+    "--yellow-400",
+    "--red-400",
+    "--purple-400",
+    "--blue-400",
+    "--indigo-400",
+    "--violet-400",
     "--sky-400",
     "--pink-400",
     "--green-400",
@@ -19,14 +29,29 @@ export const BoxesCore = ({ className, ...rest }) => {
     "--violet-400",
   ];
 
-  const getRandomColor = () => {
+  const colors2 = [
+    "--sky-400",
+    "--pink-400",
+    "--green-400",
+    "--yellow-400",
+    "--red-400",
+    "--purple-400",
+    "--blue-400",
+    "--indigo-400",
+    "--violet-400",
+  ];
+
+  const getRandomColor = (i, j) => {
+    if (j < 22 || Math.abs(i - j) < 5) {
+      return colors2[Math.floor(Math.random() * colors2.length)];
+    }
     return colors[Math.floor(Math.random() * colors.length)];
   };
 
   return (
     <div
       style={{
-        transform: `translate(-40%,-60%) skewX(-48deg) skewY(14deg) scale(0.675) rotate(0deg) translateZ(0)`,
+        transform: `translate(-40%,-20%) skewX(-48deg) skewY(14deg) scale(0.8) rotate(0deg) translateZ(0)`,
       }}
       className={cn(
         "absolute left-1/4 p-4 -top-1/4 flex  -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 ",
@@ -42,14 +67,14 @@ export const BoxesCore = ({ className, ...rest }) => {
           {cols.map((_, j) => (
             <motion.div
               initial={{
-                backgroundColor: `var(${getRandomColor()})`,
+                backgroundColor: `var(${getRandomColor(i, j)})`,
               }}
               transition={{
                 delay: 1,
                 duration: 2.5,
               }}
               whileHover={{
-                backgroundColor: `${"lightgray"}`,
+                backgroundColor: `${"#D3D3D3"}`,
                 transition: { duration: 0 },
               }}
               whileTap={{

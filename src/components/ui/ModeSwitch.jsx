@@ -10,7 +10,7 @@ const ModeSwitch = ({ classNames }) => {
         <input
           type="checkbox"
           checked={theme == "light"}
-          onClick={toggleTheme}
+          onChange={toggleTheme}
         />
         <div className="slider">
           <div className="circle circle2"></div>
