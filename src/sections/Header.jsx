@@ -237,7 +237,7 @@ const Header = () => {
                     <p>210 9999000</p>
                   </div>
                 </div>
-                <div className="header hidden sm:flex">
+                <div className="header hidden lg:flex">
                   <h1>
                     <span>L</span>
                     <span>I</span>

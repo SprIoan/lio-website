@@ -266,15 +266,15 @@
     }
 
     .links {
-        margin-top: 4vh;
+        margin-top: 1vh;
         display: flex;
         flex-direction: column;
-        gap:3vh;
+        gap:2.5vh;
     }
 
     .video-wrapper {
         position: absolute;
-        bottom: 10vh;
+        bottom: 8vh;
         margin: auto;
         width: 90vw
     }
