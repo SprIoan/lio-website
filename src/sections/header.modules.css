@@ -51,6 +51,7 @@
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
     z-index: 10;
     overflow: hidden;
+    will-change: clip-path, transform;
 }
 
 .menu-toggle:hover .menu-toggle-icon{
@@ -64,6 +65,9 @@
 
 .mode-switch {
     will-change: transform, opacity, height, width; /* Or any other property that changes */
+    @media screen and (max-width: 450px) {
+        right: -40px!important;
+    }
   }
 
 .hamburger {
@@ -122,6 +126,7 @@
     transform-style: preserve-3d;
     perspective: 1000px;
     clip-path:polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%); 
+    will-change: clip-path;
 
 }
 
@@ -185,6 +190,7 @@
     padding: 0.3em;
     display: none;
     clip-path: (0% 100%, 100% 100%, 100% 100%, 0% 100%);
+    will-change: clip-path;
 }
 
 .video-wrapper video {

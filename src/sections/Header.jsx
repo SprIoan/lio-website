@@ -173,7 +173,7 @@ const Header = () => {
               <div className="col col-1 ">
                 <div className="menu-logo mr-auto relative">
                   <Logo />
-                  <ModeSwitch classNames="mode-switch absolute -right-24 sm:-right-20 top-[50%] translate-y-[-50%] z-[999] transition-all" />
+                  <ModeSwitch classNames="mode-switch absolute -right-20 sm:-right-20 top-[50%] translate-y-[-50%] z-[999] transition-all" />
                 </div>
 
                 <div className="links">
@@ -212,7 +212,7 @@ const Header = () => {
                 </div>
 
                 <div className="video-wrapper">
-                  <video autoPlay muted loop>
+                  <video autoPlay muted loop playsInline>
                     <source src="/lio-vid.mp4" type="video/mp4" />
                   </video>
                 </div>
