@@ -1,9 +1,11 @@
-import { Suspense } from "react";
+import { Suspense, useRef } from "react";
 import { Boxes } from "../components/ui/background-boxes";
 import { cn } from "../lib/utils";
 import Loading from "../components/ui/Loading";
 import { useTheme } from "../ThemeContext";
 import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 const AceternityLogo = () => {
   return (
@@ -27,9 +29,36 @@ const AceternityLogo = () => {
 };
 const Hero = () => {
   const { theme } = useTheme();
+  const LearnMoreRef = useRef(null);
+
+  useGSAP((context, contextSafe) => {
+    gsap.from("#intro-text", {
+      opacity: 0,
+      y: -10,
+      delay: 0.25,
+      duration: 2,
+      ease: "power2.out",
+    });
+
+    const onLearnMore = contextSafe(() => {
+      window.scrollTo({
+        top: document.getElementById("info").offsetTop,
+        behavior: "smooth",
+      });
+    });
+
+    //add event listener to the button
+    LearnMoreRef.current.addEventListener("click", onLearnMore);
+
+    return () => {
+      //remove event listener
+      LearnMoreRef.current.removeEventListener("click", onLearnMore);
+    };
+  }, []);
   return (
     <Suspense fallback={<Loading />}>
       <div
+        id="hero"
         className={`h-screen relative mx-auto overflow-hidden ${
           theme == "light" ? "bg-white" : "bg-slate-900"
         } flex flex-col items-center justify-center rounded-lg`}
@@ -42,6 +71,7 @@ const Hero = () => {
 
         <Boxes />
         <h1
+          id="intro-text"
           className={cn(
             `md:text-6xl lg:text-7xl text-3xl font-semibold z-0 pointer-events-none border-4 border-black dark:border-white shadow-2xl p-4 bg-white dark:bg-black ${
               theme == "light" ? "text-black" : "text-white"
@@ -64,9 +94,12 @@ const Hero = () => {
             className="dark:bg-black bg-white text-black dark:text-white flex items-center space-x-2"
           >
             <AceternityLogo />
-            <span className="whitespace-nowrap text-lg md:text-xl">
+            <a
+              ref={LearnMoreRef}
+              className="whitespace-nowrap text-lg md:text-xl"
+            >
               Learn More
-            </span>
+            </a>
           </HoverBorderGradient>
         </div>
       </div>
