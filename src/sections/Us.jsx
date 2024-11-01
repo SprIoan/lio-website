@@ -43,7 +43,14 @@ const Us = () => {
       end: "bottom bottom",
       onUpdate: (self) => {
         const rotation = self.progress * 360;
-        gsap.to(".revealer", { rotation: rotation });
+        let top = 50 * self.progress;
+        if (window.innerWidth < 1024) {
+          top = 200 * self.progress;
+        }
+        if (window.innerWidth < 768) {
+          top = 250 * self.progress;
+        }
+        gsap.to(".revealer", { rotation: rotation, top: `${top}px` });
       },
     });
 
@@ -76,6 +83,8 @@ const Us = () => {
       onUpdate: (self) => {
         const progress = self.progress;
         const left = 35 + 15 * progress;
+        //get previous margin top value
+
         gsap.to(".revealer", {
           left: `${left}%`,
           ease: "none",
@@ -90,7 +99,7 @@ const Us = () => {
       end: "bottom bottom",
       scrub: 1,
       onUpdate: (self) => {
-        const scale = 1 + 12 * self.progress;
+        const scale = 1 + 15 * self.progress;
         gsap.to(".revealer", {
           scale: scale,
           ease: "none",
@@ -105,17 +114,20 @@ const Us = () => {
       <section id="info" className="info">
         <div className="header-rows">
           <div className="header-row">
-            <h1 className="h1-us">Motion</h1>
+            <h1 className="h1-us">Concept</h1>
           </div>
           <div className="header-row">
-            <h1 className="h1-us">Stills</h1>
+            <h1 className="h1-us">vision</h1>
           </div>
         </div>
       </section>
       <section className="header-info">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-          vestibulum, quam nec tincidunt lacinia, mi lacus luctus elit, nec.
+          Our vision is to help businesses enhance their processes through
+          efficient software solutions, allowing them to focus on their
+          employees. <br /> <br />
+          By supporting their employees, companies can build a strong foundation
+          for exceptional client care.
         </p>
         <div className="header-images">
           <div className="img">

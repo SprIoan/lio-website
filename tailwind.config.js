@@ -1,7 +1,5 @@
 //eslint-disable-next-line
-const defaultTheme = require("tailwindcss/defaultTheme");
-//eslint-disable-next-line
-const colors = require("tailwindcss/colors");
+import { colors } from "tailwindcss/colors";
 const {
   default: flattenColorPalette,
   //eslint-disable-next-line

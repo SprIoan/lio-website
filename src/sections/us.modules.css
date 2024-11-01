@@ -14,19 +14,37 @@
     font-size: 200px;
     font-weight: 400;
     letter-spacing: -4px;
+
+    @media screen and (max-width: 1024px) {
+        font-size: 100px;
+    }
+    @media screen and (max-width: 767px) {
+        font-size: 50px;
+    }
 }
 
 section.info {
     width: 100vw;
-    height: 150vh;
+    height: 130vh;
     background-color: #000;
     color: #fff;
+    @media screen and (max-width: 1024px) {
+        height: 100vh;
+        
+    }
 }
 
 .header-row {
     width: 100%;
     height: 250px;
     padding: 0 2em;
+    @media  screen and (max-width: 1024px) {
+        padding: 0 1.5em;
+        height: 150px;
+    }
+    @media screen and (max-width: 767px) {
+        height: 100px;
+    }
 }
 
 .header-row:nth-child(1) {
@@ -58,6 +76,10 @@ section.info {
     font-family: "PP Editorial Old";
     font-size:52px;
     font-weight: lighter;
+    @media screen and (max-width: 767px) {
+        font-size: 32px;
+        
+    }
 }
 
 .header-images {
@@ -98,6 +120,16 @@ section.whitespace {
     margin-top: 325px;
     width: 120px;
     height: 120px;
+    @media screen and (max-width: 1024px) {
+        width: 90px;
+        height: 90px;
+        margin-top: 180px;
+    }
+    @media screen and (max-width: 767px) {
+        width: 60px;
+        height: 60px;
+        margin-top: 115px;
+    }
 }
 
 .revealer .revealer-1 {
