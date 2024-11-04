@@ -110,7 +110,7 @@ const Us = () => {
   }, []);
 
   return (
-    <div className="container-us">
+    <div className="container-us bg-white text-black dark:bg-black dark:text-gray-100">
       <section id="info" className="info">
         <div className="header-rows">
           <div className="header-row">
@@ -129,25 +129,17 @@ const Us = () => {
           By supporting their employees, companies can build a strong foundation
           for exceptional client care.
         </p>
-        <div className="header-images">
-          <div className="img">
-            <img src="/images/lio-dark.png" alt="placeholder" />
-            <img src="/images/lio-dark.png" alt="placeholder" />
-            <img src="/images/lio-dark.png" alt="placeholder" />
-            <img src="/images/lio-dark.png" alt="placeholder" />
-          </div>
-        </div>
       </section>
 
       <section className="whitespace"></section>
       <section className="pinned">
-        <div className="revealer">
-          <div className="revealer-1"></div>
-          <div className="revealer-2"></div>
+        <div className="revealer ">
+          <div className="revealer-1 bg-gray-300 dark:bg-gray-500"></div>
+          <div className="revealer-2 bg-gray-300 dark:bg-gray-500"></div>
         </div>
       </section>
 
-      <section className="website-content">
+      <section className="website-content bg-gray-300 dark:bg-gray-500">
         <h1 className="h1-us">
           {" "}
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed

@@ -179,10 +179,11 @@ const Header = () => {
                 <div className="links">
                   <div className="link">
                     <a
-                      href="#"
+                      href="#info"
+                      onClick={() => toggleRef.current.click()}
                       className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors"
                     >
-                      Projects
+                      Vision
                     </a>
                   </div>
                   <div className="link">
