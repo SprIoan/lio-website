@@ -10,6 +10,8 @@ const Header = () => {
   const { theme } = useTheme();
   const [isAnimating, setIsAnimating] = useState(false);
 
+  const visionRef = useRef();
+
   const Logo = () => {
     useEffect(() => {
       const lightLogo = new Image();
@@ -133,12 +135,26 @@ const Header = () => {
         }
       });
 
+      const onVisionClick = contextSafe(() => {
+        //call onToggleMenu function
+        onToggleMenu();
+        //wait 1 sec
+        setTimeout(() => {
+          window.scrollTo({
+            top: document.getElementById("info").offsetTop,
+            behavior: "smooth",
+          });
+        }, 1000);
+      });
+
       //add event listener
+      visionRef.current.addEventListener("click", onVisionClick);
       toggleRef.current.addEventListener("click", onToggleMenu);
 
       return () => {
         //remove event listener
         toggleRef.current.removeEventListener("click", onToggleMenu);
+        visionRef.current.removeEventListener("click", onVisionClick);
       };
     },
     { scope: menuRef }
@@ -179,8 +195,8 @@ const Header = () => {
                 <div className="links">
                   <div className="link">
                     <a
-                      href="#info"
-                      onClick={() => toggleRef.current.click()}
+                      href="#"
+                      ref={visionRef}
                       className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors"
                     >
                       Vision

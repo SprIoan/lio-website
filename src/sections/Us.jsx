@@ -133,7 +133,7 @@ const Us = () => {
 
       <section className="whitespace"></section>
       <section className="pinned">
-        <div className="revealer ">
+        <div className="revealer">
           <div className="revealer-1 bg-gray-300 dark:bg-gray-500"></div>
           <div className="revealer-2 bg-gray-300 dark:bg-gray-500"></div>
         </div>
