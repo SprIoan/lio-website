@@ -139,11 +139,9 @@ const Us = () => {
         </div>
       </section>
 
-      <section className="website-content bg-gray-300 dark:bg-gray-500">
-        <h1 className="h1-us">
-          {" "}
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-          vestibulum, quam nec tincidunt lacinia, mi lacus luctus elit, nec.{" "}
+      <section className="website-content bg-gray-300 dark:bg-gray-500 max-w-7xl mx-auto px-4 ">
+        <h1 className="h1-us text-[40px] md:text-[80px] lg:text-[100px] xl:text-[120px] 2xl:text-[150px] text-center">
+          EXPERTISE
         </h1>
       </section>
     </div>

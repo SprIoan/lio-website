@@ -15,19 +15,20 @@ const Header = () => {
   const Logo = () => {
     useEffect(() => {
       const lightLogo = new Image();
-      lightLogo.src = "/images/lio-light.png";
+      lightLogo.src = "/images/lio-light.svg";
       const darkLogo = new Image();
-      darkLogo.src = "/images/lio-dark.png";
+      darkLogo.src = "/images/lio-dark.svg";
     }, []);
 
     return (
       <a href="#">
         <img
           src={
-            theme === "light" ? "/images/lio-light.png" : "/images/lio-dark.png"
+            theme === "light" ? "/images/lio-light.svg" : "/images/lio-dark.svg"
           }
           width={140}
           height={55}
+          className="scale-105 lg:scale-150 lg:ml-4 relative -top-1 sm:top-0"
           alt="Xora"
         />
       </a>
