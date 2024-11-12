@@ -1,6 +1,8 @@
 //eslint-disable-next-line
 import { colors } from "tailwindcss/colors";
 
+import { fontFamily } from "tailwindcss/defaultTheme";
+
 import flattenColorPalette from "tailwindcss/lib/util/flattenColorPalette";
 
 /** @type {import('tailwindcss').Config} */
@@ -24,6 +26,21 @@ export default {
           DEFAULT: "#000000",
           100: "#05091D",
         },
+        n: {
+          1: "#FFFFFF",
+          2: "#CAC6DD",
+          3: "#ADA8C3",
+          4: "#757185",
+          5: "#3F3A52",
+          6: "#252134",
+          7: "#15131D",
+          8: "#0E0C15",
+          9: "#474060",
+          10: "#43435C",
+          11: "#1B1B2E",
+          12: "#2E2A41",
+          13: "#6C7275",
+        },
       },
       boxShadow: {
         100: "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 16px 24px rgba(0, 0, 0, 0.25), inset 0px 3px 6px #1959AD",
@@ -35,6 +52,12 @@ export default {
       fontFamily: {
         inter: ["Inter", "sans-serif"],
         poppins: ["Poppins", "sans-serif"],
+        code: "var(--font-code)",
+        grotesk: "var(--font-grotesk)",
+        sans: ["var(--font-sora)", ...fontFamily.sans],
+      },
+      letterSpacing: {
+        tagline: ".15em",
       },
       transitionProperty: {
         borderColor: "border-color",
@@ -62,11 +85,16 @@ export default {
         640: "640px",
         960: "960px",
         1230: "1230px",
+        0.25: "0.0625rem",
+        7.5: "1.875rem",
+        15: "3.75rem",
       },
       zIndex: {
         1: "1",
         2: "2",
+        3: "3",
         4: "4",
+        5: "5",
       },
       lineHeight: {
         12: "48px",
@@ -86,6 +114,17 @@ export default {
         280: "0 0 280px",
         256: "0 0 256px",
         100: "0 0 100%",
+      },
+      backgroundImage: {
+        "radial-gradient": "radial-gradient(var(--tw-gradient-stops))",
+        "conic-gradient":
+          "conic-gradient(from 225deg, #FFC876, #79FFF7, #9F53FF, #FF98E2, #FFC876)",
+        "benefit-card-1": "url(assets/benefits/card-1.svg)",
+        "benefit-card-2": "url(assets/benefits/card-2.svg)",
+        "benefit-card-3": "url(assets/benefits/card-3.svg)",
+        "benefit-card-4": "url(assets/benefits/card-4.svg)",
+        "benefit-card-5": "url(assets/benefits/card-5.svg)",
+        "benefit-card-6": "url(assets/benefits/card-6.svg)",
       },
     },
   },

@@ -1,4 +1,3 @@
-import Footer from "./sections/Footer";
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import Us from "./sections/Us";
@@ -9,7 +8,6 @@ const App = () => {
       <Header />
       <Hero />
       <Us />
-      <Footer />
     </section>
   );
 };
