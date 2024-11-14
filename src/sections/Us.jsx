@@ -136,12 +136,12 @@ const Us = () => {
       <section className="whitespace"></section>
       <section className="pinned">
         <div className="revealer">
-          <div className="revealer-1 bg-gray-300 dark:bg-gray-600"></div>
-          <div className="revealer-2 bg-gray-300 dark:bg-gray-600"></div>
+          <div className="revealer-1 bg-gray-300 dark:bg-[#685AA2]"></div>
+          <div className="revealer-2 bg-gray-300 dark:bg-[#685AA2]"></div>
         </div>
       </section>
 
-      <section className="website-content bg-gray-300 dark:bg-gradient-to-b from-gray-600 to-[#0F172A]  w-full flex  justify-center items-center">
+      <section className="website-content bg-gray-300 dark:bg-gradient-to-b from-[#685AA2] to-[#0F172A]  w-full flex  justify-center items-center">
         <Benefits />
       </section>
       <section className="faq bg-gray-300 dark:bg-gradient-to-b from-[#0F172A] to-black w-full flex  justify-center items-center">

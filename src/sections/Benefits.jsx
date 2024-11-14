@@ -25,7 +25,7 @@ const Benefits = () => {
                 <h5 className="text-2xl leading-normal mb-5 font-sans">
                   {item.title}
                 </h5>
-                <p className="font-light text-[0.895rem] leading-6 md:text-base mb-6 text-n-3 font-sans">
+                <p className="font-light text-[0.895rem] leading-6 md:text-base mb-6 text-n-5 dark:text-n-3 font-sans">
                   {item.text}
                 </p>
                 <div className="flex items-center mt-auto">
@@ -36,7 +36,7 @@ const Benefits = () => {
                     alt={item.title}
                     className="!w-[48px] !h-[48px] mr-3"
                   />
-                  <p className="ml-auto !font-code text-xs font-bold text-n-1 uppercase tracking-wider z-3">
+                  <p className="ml-auto !font-code text-xs font-bold dark:text-n-1 uppercase tracking-wider z-3">
                     Explore more
                   </p>
                   <Arrow />
@@ -46,10 +46,10 @@ const Benefits = () => {
               {item.light && <GradientLight />}
 
               <div
-                className="absolute inset-0.5 bg-[#2A3343]/50"
+                className="absolute inset-0.5 bg-gray-200 dark:bg-[#685AA2]/80"
                 style={{ clipPath: "url(#benefits)" }}
               >
-                <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-25 cursor-pointer">
+                <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-10 dark:hover:opacity-15 cursor-pointer">
                   {item.imageUrl && (
                     <img
                       src={item.imageUrl}
