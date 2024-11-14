@@ -46,7 +46,7 @@ const Benefits = () => {
               {item.light && <GradientLight />}
 
               <div
-                className="absolute inset-0.5 bg-[#0F172A]/50"
+                className="absolute inset-0.5 bg-[#2A3343]/50"
                 style={{ clipPath: "url(#benefits)" }}
               >
                 <div className="absolute inset-0 opacity-0 transition-opacity hover:opacity-25 cursor-pointer">
