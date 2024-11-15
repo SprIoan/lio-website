@@ -29,7 +29,7 @@ const Header = () => {
           width={140}
           height={55}
           className="scale-105 lg:scale-150 lg:ml-4 relative -top-1 sm:top-0"
-          alt="Xora"
+          alt="Lio"
         />
       </a>
     );

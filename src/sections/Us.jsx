@@ -141,10 +141,10 @@ const Us = () => {
         </div>
       </section>
 
-      <section className="website-content bg-gray-300 dark:bg-gradient-to-b from-[#685AA2] to-[#0F172A]  w-full flex  justify-center items-center">
+      <section className="website-content  bg-gradient-to-b from-gray-300 dark:from-[#685AA2] to-gray-200 dark:to-[#0F172A]  w-full flex  justify-center items-center">
         <Benefits />
       </section>
-      <section className="faq bg-gray-300 dark:bg-gradient-to-b from-[#0F172A] to-black w-full flex  justify-center items-center">
+      <section className="faq bg-gradient-to-b from-gray-200 dark:from-[#0F172A] to-white dark:to-black w-full flex  justify-center items-center">
         <Faq />
       </section>
     </div>

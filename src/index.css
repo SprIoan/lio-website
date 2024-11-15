@@ -155,11 +155,18 @@
   }
 
   .g4 {
-    background: linear-gradient(#253575, #162561);
+    background: linear-gradient(#0f172a, black);
+  }
+  .g4-light {
+    background: linear-gradient(#E5E7EB,white);
   }
 
   .g5 {
     background: linear-gradient(#334679, #162561);
+  }
+
+  .g5-light {
+    background: linear-gradient(white, #E5E7EB);
   }
 
   .g6 {
@@ -282,7 +289,7 @@
   /* END of Pricing */
   /* START of FAQ */
   .faq-line_after {
-    @apply after:absolute after:-top-1.5 after:left-[calc(50%-5px)] after:z-4 after:size-2.5 after:rounded-half after:border-2 after:border-s2 after:bg-s1 after:content-[''];
+    @apply after:absolute after:-top-1.5 after:left-[calc(50%-5px)] after:z-4 after:size-2.5 after:rounded-half after:border-2 after:border-white  after:bg-white dark:after:border-s2 dark:after:bg-s1 after:content-[''];
   }
 
   .faq-glow_before {
@@ -290,7 +297,7 @@
   }
 
   .faq-icon {
-    @apply before:absolute before:h-0.5 before:w-3 before:bg-p3 before:content-[''] after:absolute after:h-0.5 after:w-3 after:rotate-90 after:bg-p3 after:transition-all after:duration-500 after:content-[''];
+    @apply before:absolute before:h-0.5 before:w-3 before:bg-[#2BBF63] before:content-[''] after:absolute after:h-0.5 after:w-3 after:rotate-90 after:bg-[#2BBF63] after:transition-all after:duration-500 after:content-[''];
   }
 
   /* END of FAQ */
