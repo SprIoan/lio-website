@@ -1,3 +1,4 @@
+import Contact from "./sections/Contact";
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import Us from "./sections/Us";
@@ -8,6 +9,7 @@ const App = () => {
       <Header />
       <Hero />
       <Us />
+      <Contact />
     </section>
   );
 };
