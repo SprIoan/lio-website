@@ -5,18 +5,14 @@ import Arrow from "../assets/svg/Arrow";
 
 import { GradientLight } from "./design/Benefits";
 import ClipPath from "../assets/svg/ClipPath";
-import { useEffect } from "react";
 const Benefits = () => {
-  useEffect(() => {
-    console.log(benefits);
-  }, []);
   return (
     <section id="features">
       <div className="max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem] mt-10 lg:mt-0 relative z-2">
         <Heading className="md:max-w-md lg:max-w-2xl" title="Skills We Bring" />
         <div className="h-[10vh]" />
 
-        <div className="flex flex-wrap gap-10 mb-10">
+        <div className="flex flex-wrap justify-center gap-10 mb-10">
           {benefits.map((item) => (
             <div
               className={`block ${item.specialClass} relative p-0.5 bg-no-repeat bg-[length:100%_100%] md:max-w-[24rem]`}

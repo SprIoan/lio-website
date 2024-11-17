@@ -239,8 +239,8 @@ const Header = () => {
                 <div className="socials">
                   <div className="sub-col">
                     <p>Lio Tech</p>
-                    <p>Iroon Polytecneiou 9</p>
-                    <p>10445 Athens</p>
+                    <p>Michail Voda 148</p>
+                    <p>10446 Athens</p>
                     <p>Greece</p>
                     <br />
                     <p>contact@lio.gr</p>
