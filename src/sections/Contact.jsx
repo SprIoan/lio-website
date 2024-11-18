@@ -42,26 +42,33 @@ const Contact = () => {
 
   return (
     <section
-      className="pb-10 w-full bg-gradient-to-b from-black to-black/50 pt-10"
+      className="pb-10 w-full bg-gradient-to-b from-white dark:from-black to-white/90 dark:to-black/50 pt-10"
       id="contact"
     >
-      <div className="container  border-gray-800 lg:rounded-[50px] py-3 lg:bg-gray-900/70 flex flex-col lg:flex-row lg:gap-6">
+      <div className="container border-2 dark:border-0 border-gray-800 lg:rounded-[50px] py-3 dark:lg:bg-gray-900/70 flex flex-col lg:flex-row lg:gap-6">
         <div className="w-full flex flex-col items-center lg:items-start lg:w-2/5 h-full rounded-3xl ">
           <img
             src="/images/test2.svg"
-            alt="lio-light"
-            className="w-1/2 ml-10 lg:ml-3 mt-2 "
+            alt="lio-dark"
+            className="w-1/2 ml-10 lg:ml-3 mt-2 hidden dark:flex"
           />
-          <div className="relative mt-16 flex flex-col justify-center group px-6 py-4  rounded-3xl w-[90%] bg-black/15 shadow-sm shadow-purple-200 hover:bg-black/25 transition-colors">
+          <img
+            src="/images/lio-light.svg"
+            alt="lio-light"
+            className="w-1/2 ml-10 lg:ml-3 mt-2 flex dark:hidden"
+          />
+          <div className="relative mt-16 flex flex-col justify-center group px-6 py-4 border border-black dark:border-0 rounded-3xl w-[90%] dark:bg-black/15 shadow-sm  dark:shadow-purple-200 hover:shadow-md dark:hover:bg-black/25 transition-colors">
             <a href="mailto:test@test.com">
               <img
                 src="/images/chat.svg"
                 alt="chat"
-                className="w-8 h-8 p-2  rounded-xl absolute top-3 right-4 bg-[#613594] group-hover:bg-[#904edb] transition-colors"
+                className="w-8 h-8 p-2  rounded-xl absolute top-3 right-4 bg-[#baff65bd] dark:bg-[#613594] group-hover:bg-[#BAFF65] dark:group-hover:bg-[#904edb] transition-colors"
               />
             </a>
-            <h1 className="text-lg font-semibold  text-white ">Chat to us</h1>
-            <p className="text-xs mt-3 text-gray-400">
+            <h1 className="text-lg font-semibold  text-black dark:text-white ">
+              Chat to us
+            </h1>
+            <p className="text-xs mt-3 text-gray-600 dark:text-gray-400">
               Our friendly team is here to help
             </p>
             <p className="text-xs mt-5 font-semibold text-gray-300">
@@ -79,11 +86,13 @@ const Contact = () => {
             <img
               src="/images/location.svg"
               alt="chat"
-              className="w-8 h-8 p-2  rounded-xl absolute top-3 right-4 bg-[#613594] group-hover:bg-[#904edb] transition-colors cursor-pointer"
+              className="w-8 h-8 p-2  rounded-xl absolute top-3 right-4 bg-[#baff65bd] dark:bg-[#613594] group-hover:bg-[#BAFF65] dark:group-hover:bg-[#904edb]  transition-colors cursor-pointer"
               onClick={handleLocationClick}
             />
-            <h1 className="text-lg font-semibold  text-white ">Visit us</h1>
-            <p className="text-xs mt-3 text-gray-400">
+            <h1 className="text-lg font-semibold text-black dark:text-white ">
+              Visit us
+            </h1>
+            <p className="text-xs mt-3 text-gray-600 dark:text-gray-400">
               Come say hello at our office HQ.
             </p>
             <p className="text-xs mt-5 font-semibold text-gray-300">
@@ -101,11 +110,13 @@ const Contact = () => {
               <img
                 src="/images/phone.svg"
                 alt="chat"
-                className="w-8 h-8 p-2  rounded-xl absolute top-3 right-4 bg-[#613594] group-hover:bg-[#904edb] transition-colors"
+                className="w-8 h-8 p-2  rounded-xl absolute top-3 right-4 bg-[#baff65bd] dark:bg-[#613594] group-hover:bg-[#BAFF65] dark:group-hover:bg-[#904edb]  transition-colors"
               />
             </a>
-            <h1 className="text-lg font-semibold  text-white">Call us</h1>
-            <p className="text-xs mt-3 text-gray-400">
+            <h1 className="text-lg font-semibold text-black dark:text-white">
+              Call us
+            </h1>
+            <p className="text-xs mt-3 text-gray-600 dark:text-gray-400">
               Mon-Fri from 9am to 5pm
             </p>
             <p className="text-xs mt-5 font-semibold text-gray-300">
@@ -123,64 +134,74 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="w-fit relative right-0 xl:-right-12 border  bg-purple-500/50 h-full rounded-[50px] p-10 py-16 mt-10 lg:mt-0">
-          <h1 className="font-light text-5xl text-gray-200">
+        <div className="w-fit relative right-0 xl:-right-12 border bg-[#BAFF66] dark:bg-purple-500/50 h-full rounded-[50px] p-10 py-16 mt-10 lg:mt-0">
+          <h1 className="font-light text-5xl text-black dark:text-gray-200">
             Got Ideas? We&apos;ve got the skills. Let&apos;s team up.
           </h1>
-          <p className="text-md mt-6 text-gray-400">
+          <p className="text-md mt-6 text-gray-900 dark:text-gray-400">
             Tell us more about yourself and what you&apos;ve got in mind.
           </p>
           <div className="flex gap-2 flex-col justify-center items-center mt-6">
             <input
               type="text"
               placeholder="Your Name"
-              className="w-full outline-none text-sm border-b mt-4 p-2 bg-transparent"
+              className="w-full  outline-none text-sm border-b border-black mt-4 p-2 bg-transparent placeholder:text-black/90 dark:placeholder:text-gray-400 "
             />
             <input
               type="text"
               placeholder="Your Email"
-              className="w-full outline-none text-sm border-b mt-4 p-2 bg-transparent"
+              className="w-full outline-none text-sm border-b border-black mt-4 p-2 bg-transparent placeholder:text-black/90 dark:placeholder:text-gray-400"
             />
             <textarea
               placeholder="Tell us a little about the project..."
-              className="w-full outline-none mt-4 p-2 bg-transparent border-b"
+              className="w-full outline-none mt-4 p-2 bg-transparent border-b border-black placeholder:text-black/90 dark:placeholder:text-gray-400"
             ></textarea>
-            <p className="mr-auto mt-4 text-sm text-white">How can we help?</p>
+            <p className="mr-auto mt-4 text-sm text-black dark:text-white">
+              How can we help?
+            </p>
             <div className="mr-auto ml-0 mt-2 flex flex-wrap gap-4 w-full">
               <div className="flex gap-3  justify-start items-center">
                 <CustomCheckbox
                   checked={checked1}
                   onChange={() => setChecked1(!checked1)}
                 />
-                <span className="text-sm text-white">Website Design</span>
+                <span className="text-sm text-black dark:text-white">
+                  Website Design
+                </span>
               </div>
               <div className="flex gap-3  justify-start items-center">
                 <CustomCheckbox
                   checked={checked2}
                   onChange={() => setChecked2(!checked2)}
                 />
-                <span className="text-sm text-white">UX Design</span>
+                <span className="text-sm text-black dark:text-white">
+                  UX Design
+                </span>
               </div>
               <div className="flex gap-3 justify-start items-center">
                 <CustomCheckbox
                   checked={checked3}
                   onChange={() => setChecked3(!checked3)}
                 />
-                <span className="text-sm   text-white">Technical Guidance</span>
+                <span className="text-sm   text-black dark:text-white">
+                  Technical Guidance
+                </span>
               </div>
               <div className="flex gap-3  justify-start items-center">
                 <CustomCheckbox
                   checked={checked4}
                   onChange={() => setChecked4(!checked4)}
                 />
-                <span className="text-sm text-white">AI Models</span>
+                <span className="text-sm text-black dark:text-white">
+                  AI Models
+                </span>
               </div>
               <div className="flex gap-3   justify-start items-center">
                 <CustomCheckbox
                   checked={checked5}
                   onChange={() => setChecked5(!checked5)}
                 />
-                <span className="text-sm text-white">
+                <span className="text-sm text-black dark:text-white">
                   Strategy & consulting
                 </span>
               </div>
@@ -189,10 +210,12 @@ const Contact = () => {
                   checked={checked6}
                   onChange={() => setChecked6(!checked6)}
                 />
-                <span className="text-sm text-white">Other</span>
+                <span className="text-sm text-black dark:text-white">
+                  Other
+                </span>
               </div>
             </div>
-            <button className="w-[90%] mt-4 px-2 py-3 text-sm rounded-md bg-gradient-to-br from-black to-gray-900 hover:from-gray-900 hover:to-black transition-colors text-white">
+            <button className="w-[90%] mt-4 xl:mt-10 px-2 py-3 text-sm rounded-md bg-gradient-to-br from-black to-gray-900 hover:from-gray-900 hover:to-black transition-colors text-white">
               Let&apos;s get started
             </button>
           </div>
