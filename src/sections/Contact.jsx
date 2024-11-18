@@ -57,18 +57,16 @@ const Contact = () => {
             alt="lio-light"
             className="w-1/2 ml-10 lg:ml-3 mt-2 flex dark:hidden"
           />
-          <div className="relative mt-16 flex flex-col justify-center group px-6 py-4 border border-black dark:border-0 rounded-3xl w-[90%] dark:bg-black/15 shadow-sm  dark:shadow-purple-200 hover:shadow-md dark:hover:bg-black/25 transition-colors">
+          <div className="relative mt-16 flex flex-col justify-center group px-6 py-4 border border-black dark:border-0 rounded-3xl w-[90%] bg-[#A20A12] dark:bg-black/15 shadow-sm  dark:shadow-purple-200 hover:shadow-md dark:hover:bg-black/25 transition-colors">
             <a href="mailto:test@test.com">
               <img
                 src="/images/chat.svg"
                 alt="chat"
-                className="w-8 h-8 p-2  rounded-xl absolute top-3 right-4 bg-[#baff65bd] dark:bg-[#613594] group-hover:bg-[#BAFF65] dark:group-hover:bg-[#904edb] transition-colors"
+                className="w-8 h-8 p-2  rounded-xl absolute top-3 right-4 bg-[#2BBF63] dark:bg-[#613594] group-hover:bg-[#4edc85] dark:group-hover:bg-[#904edb] transition-colors"
               />
             </a>
-            <h1 className="text-lg font-semibold  text-black dark:text-white ">
-              Chat to us
-            </h1>
-            <p className="text-xs mt-3 text-gray-600 dark:text-gray-400">
+            <h1 className="text-lg font-semibold  text-white ">Chat to us</h1>
+            <p className="text-xs mt-3 text-gray-400">
               Our friendly team is here to help
             </p>
             <p className="text-xs mt-5 font-semibold text-gray-300">
@@ -86,7 +84,7 @@ const Contact = () => {
             <img
               src="/images/location.svg"
               alt="chat"
-              className="w-8 h-8 p-2  rounded-xl absolute top-3 right-4 bg-[#baff65bd] dark:bg-[#613594] group-hover:bg-[#BAFF65] dark:group-hover:bg-[#904edb]  transition-colors cursor-pointer"
+              className="w-8 h-8 p-2  rounded-xl absolute top-3 right-4 bg-[#56ec90] dark:bg-[#613594] group-hover:bg-[#2BBF63] dark:group-hover:bg-[#904edb]  transition-colors cursor-pointer"
               onClick={handleLocationClick}
             />
             <h1 className="text-lg font-semibold text-black dark:text-white ">
@@ -110,7 +108,7 @@ const Contact = () => {
               <img
                 src="/images/phone.svg"
                 alt="chat"
-                className="w-8 h-8 p-2  rounded-xl absolute top-3 right-4 bg-[#baff65bd] dark:bg-[#613594] group-hover:bg-[#BAFF65] dark:group-hover:bg-[#904edb]  transition-colors"
+                className="w-8 h-8 p-2  rounded-xl absolute top-3 right-4 bg-[#56ec90] dark:bg-[#613594] group-hover:bg-[#2BBF63] dark:group-hover:bg-[#904edb]  transition-colors"
               />
             </a>
             <h1 className="text-lg font-semibold text-black dark:text-white">
@@ -134,7 +132,7 @@ const Contact = () => {
           </div>
         </div>
 
-        <div className="w-fit relative right-0 xl:-right-12 border bg-[#BAFF66] dark:bg-purple-500/50 h-full rounded-[50px] p-10 py-16 mt-10 lg:mt-0">
+        <div className="w-fit relative right-0 xl:-right-12 border bg-[#2BBF63] dark:bg-purple-500/50 h-full rounded-[50px] p-10 py-16 mt-10 lg:mt-0">
           <h1 className="font-light text-5xl text-black dark:text-gray-200">
             Got Ideas? We&apos;ve got the skills. Let&apos;s team up.
           </h1>
