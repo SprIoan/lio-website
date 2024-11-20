@@ -54,7 +54,7 @@ const Contact = () => {
       className="pb-10 w-full bg-gradient-to-b from-white dark:from-black to-white/90 dark:to-black/50 pt-10"
       id="contact"
     >
-      <div className="container border-2 dark:border-0 border-gray-800 lg:rounded-[50px] py-3 dark:lg:bg-gray-900/70 flex flex-col lg:flex-row lg:gap-6">
+      <div className="container xl:border-2 dark:border-0 border-gray-800 lg:rounded-[50px] py-3 dark:lg:bg-gray-900/70 flex flex-col lg:flex-row lg:gap-6">
         <div className="w-full flex flex-col items-center lg:items-start lg:w-2/5 h-full rounded-3xl ">
           <img
             src="/images/contact-dark.svg"
@@ -64,7 +64,7 @@ const Contact = () => {
           <img
             src="/images/contact-light.svg"
             alt="lio-light"
-            className="w-1/2 ml-10 lg:ml-3 mt-2 flex dark:hidden"
+            className="w-1/2 ml-16 sm:ml-32 lg:ml-3 mt-2 flex dark:hidden"
           />
           <div className="relative mt-16 flex flex-col justify-center group px-6 py-4 rounded-3xl w-[90%] bg-white/75 dark:bg-black/15 shadow-sm  hover:bg-white dark:hover:bg-black/40 transition-colors">
             <a href="mailto:test@test.com">

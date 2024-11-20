@@ -11,6 +11,9 @@ const Header = () => {
   const [isAnimating, setIsAnimating] = useState(false);
 
   const visionRef = useRef();
+  const expertiseRef = useRef();
+  const aboutRef = useRef();
+  const contactRef = useRef();
 
   const Logo = () => {
     useEffect(() => {
@@ -150,11 +153,17 @@ const Header = () => {
 
       //add event listener
       visionRef.current.addEventListener("click", onVisionClick);
+      expertiseRef.current.addEventListener("click", onToggleMenu);
+      aboutRef.current.addEventListener("click", onToggleMenu);
+      contactRef.current.addEventListener("click", onToggleMenu);
       toggleRef.current.addEventListener("click", onToggleMenu);
 
       return () => {
         //remove event listener
         toggleRef.current.removeEventListener("click", onToggleMenu);
+        expertiseRef.current.removeEventListener("click", onToggleMenu);
+        aboutRef.current.removeEventListener("click", onToggleMenu);
+        contactRef.current.removeEventListener("click", onToggleMenu);
         visionRef.current.removeEventListener("click", onVisionClick);
       };
     },
@@ -205,7 +214,8 @@ const Header = () => {
                   </div>
                   <div className="link">
                     <a
-                      href="#"
+                      href="#expertise"
+                      ref={expertiseRef}
                       className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors"
                     >
                       Expertise
@@ -213,7 +223,8 @@ const Header = () => {
                   </div>
                   <div className="link">
                     <a
-                      href="#"
+                      href="#about"
+                      ref={aboutRef}
                       className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors"
                     >
                       About
@@ -221,7 +232,8 @@ const Header = () => {
                   </div>
                   <div className="link">
                     <a
-                      href="#"
+                      href="#contact"
+                      ref={contactRef}
                       className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors"
                     >
                       Contact

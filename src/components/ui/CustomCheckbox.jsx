@@ -14,7 +14,7 @@ const CustomCheckbox = ({ checked, onChange }) => {
         border-2 border-[#323232] rounded-[5px]
         shadow-[4px_4px_#323232]
         transition-all duration-300
-        ${checked ? "bg-[#2BBF63]" : "bg-[#ccc]"}
+        ${checked ? "bg-[#2BBF63]" : "bg-white dark:bg-[#ccc]"}
       `}
       >
         {checked && (
