@@ -51,7 +51,7 @@ const Contact = () => {
 
   return (
     <section
-      className="pb-10 w-full bg-gradient-to-b from-white dark:from-black to-white/90 dark:to-black/50 pt-10"
+      className="pb-20 w-full bg-gradient-to-b from-white dark:from-black to-white/90 dark:to-black/50 pt-10"
       id="contact"
     >
       <div className="container xl:border-2 dark:border-0 border-gray-800 lg:rounded-[50px] py-3 dark:lg:bg-gray-900/70 flex flex-col lg:flex-row lg:gap-6">

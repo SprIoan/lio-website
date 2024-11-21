@@ -1,4 +1,5 @@
 import Contact from "./sections/Contact";
+import Footer from "./sections/Footer";
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
 import Us from "./sections/Us";
@@ -10,6 +11,7 @@ const App = () => {
       <Hero />
       <Us />
       <Contact />
+      <Footer />
     </section>
   );
 };
