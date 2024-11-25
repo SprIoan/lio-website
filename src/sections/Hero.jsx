@@ -32,14 +32,6 @@ const Hero = () => {
   const LearnMoreRef = useRef(null);
 
   useGSAP((context, contextSafe) => {
-    gsap.from("#intro-text", {
-      opacity: 0,
-      y: -10,
-      delay: 0.25,
-      duration: 2,
-      ease: "power2.out",
-    });
-
     const onLearnMore = contextSafe(() => {
       window.scrollTo({
         top: document.getElementById("info").offsetTop,
@@ -73,9 +65,7 @@ const Hero = () => {
         <h1
           id="intro-text"
           className={cn(
-            `md:text-6xl lg:text-7xl text-3xl font-semibold z-0 pointer-events-none border-4 border-black dark:border-white shadow-2xl p-4 bg-white dark:bg-black ${
-              theme == "light" ? "text-black" : "text-white"
-            } relative z-20`
+            `md:text-6xl lg:text-7xl text-3xl font-semibold z-0 pointer-events-none border-4 border-black dark:border-white shadow-2xl p-4 bg-white dark:bg-black text-black dark:text-white relative z-20`
           )}
         >
           Welcome to Lio Tech

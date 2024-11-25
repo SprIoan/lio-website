@@ -1,3 +1,4 @@
+import { useTheme } from "../ThemeContext";
 import CustomCheckbox from "../components/ui/CustomCheckbox";
 import { useState } from "react";
 
@@ -8,6 +9,8 @@ const Contact = () => {
   const [checked4, setChecked4] = useState(false);
   const [checked5, setChecked5] = useState(false);
   const [checked6, setChecked6] = useState(false);
+
+  const { theme } = useTheme();
 
   const handleLocationClick = () => {
     window.open("https://maps.app.goo.gl/GHKUcTt3TbcFKUHM6", "_blank");
@@ -51,10 +54,11 @@ const Contact = () => {
 
   return (
     <section
-      className="pb-20 w-full bg-gradient-to-b from-white dark:from-black to-white/90 dark:to-black/50 pt-10"
+      className={`pb-20 w-full bg-gradient-to-b from-white dark:from-black to-white/90 dark:to-black/50 pt-10 border-b border-white/20
+        ${theme === "dark" ? "bg-grid" : "bg-grid-light"}`}
       id="contact"
     >
-      <div className="container xl:border-2 dark:border-0 border-gray-800 lg:rounded-[50px] py-3 dark:lg:bg-gray-900/70 flex flex-col lg:flex-row lg:gap-6">
+      <div className="relative container xl:border-2 dark:border-0 border-gray-800 lg:rounded-[50px] py-3 dark:lg:bg-gray-900/70 flex flex-col lg:flex-row lg:gap-6 z-1">
         <div className="w-full flex flex-col items-center lg:items-start lg:w-2/5 h-full rounded-3xl ">
           <img
             src="/images/contact-dark.svg"
