@@ -4,25 +4,32 @@ import "./header.modules.css";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { CustomEase } from "gsap/CustomEase";
-import { useState, useRef, useEffect } from "react";
+import { useRef, useEffect, lazy, Suspense } from "react";
+const VideoPlayer = lazy(() => import("./VideoPlayer"));
+
+gsap.registerPlugin(CustomEase);
+CustomEase.create(
+  "hop",
+  "M0,0 C0.354,0 0.464,0.133 0.498,0.502 0.532,0.872 0.651,1 1,1"
+);
 
 const Header = () => {
   const { theme } = useTheme();
-  const [isAnimating, setIsAnimating] = useState(false);
+  const isAnimating = useRef(false);
 
   const visionRef = useRef();
   const expertiseRef = useRef();
   const aboutRef = useRef();
   const contactRef = useRef();
 
-  const Logo = () => {
-    useEffect(() => {
-      const lightLogo = new Image();
-      lightLogo.src = "/images/lio-light.svg";
-      const darkLogo = new Image();
-      darkLogo.src = "/images/lio-dark.svg";
-    }, []);
+  useEffect(() => {
+    const lightLogo = new Image();
+    lightLogo.src = "/images/lio-light.svg";
+    const darkLogo = new Image();
+    darkLogo.src = "/images/lio-dark.svg";
+  }, []);
 
+  const Logo = () => {
     return (
       <a href="#">
         <img
@@ -43,21 +50,15 @@ const Header = () => {
 
   useGSAP(
     (context, contextSafe) => {
-      gsap.registerPlugin(CustomEase);
-      CustomEase.create(
-        "hop",
-        "M0,0 C0.354,0 0.464,0.133 0.498,0.502 0.532,0.872 0.651,1 1,1"
-      );
-
       const onToggleMenu = contextSafe(() => {
-        if (isAnimating) return;
+        if (isAnimating.current) return;
 
         const menuToggle = document.querySelector(".menu-toggle");
 
         if (menuToggle.classList.contains("closed")) {
           menuToggle.classList.remove("closed");
           menuToggle.classList.add("opened");
-          setIsAnimating(true);
+          isAnimating.current = true;
           gsap.to(".menu", {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)",
             ease: "hop",
@@ -66,7 +67,7 @@ const Header = () => {
               document.querySelector(".menu").style.pointerEvents = "all";
             },
             onComplete: () => {
-              setIsAnimating(false);
+              isAnimating.current = false;
             },
           });
 
@@ -115,7 +116,7 @@ const Header = () => {
         } else {
           menuToggle.classList.remove("opened");
           menuToggle.classList.add("closed");
-          setIsAnimating(true);
+          isAnimating.current = true;
 
           gsap.to(".menu", {
             clipPath: "polygon(0% 0%, 100% 0%, 100% 0%, 0% 0%)",
@@ -133,7 +134,7 @@ const Header = () => {
                 clipPath: "polygon(0% 100%, 100% 100%, 100% 100%, 0% 100%)",
               });
               gsap.set(".header h1 span", { rotateY: 90, y: 500, scale: 0.75 });
-              setIsAnimating(false);
+              isAnimating.current = false;
             },
           });
         }
@@ -242,6 +243,9 @@ const Header = () => {
                 </div>
 
                 <div className="video-wrapper">
+                  <Suspense fallback={<div>Loading...</div>}>
+                    <VideoPlayer />
+                  </Suspense>
                   <video autoPlay muted loop playsInline>
                     <source src="/lio-vid.mp4" type="video/mp4" />
                   </video>
