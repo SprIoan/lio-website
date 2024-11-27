@@ -98,12 +98,19 @@ const Us = () => {
     ScrollTrigger.create({
       trigger: ".whitespace",
       start: "top 50%",
-      end: "bottom bottom",
+      end: "bottom top",
       scrub: 1,
       onUpdate: (self) => {
         const scale = 1 + 15 * self.progress;
         gsap.to(".revealer", {
           scale: scale,
+          ease: "none",
+          duration: 0,
+        });
+      },
+      onLeave: () => {
+        gsap.to(".revealer", {
+          scale: 1,
           ease: "none",
           duration: 0,
         });
