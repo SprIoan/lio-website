@@ -8,12 +8,12 @@ import benefitIcon1 from "./benefits/icon-1.svg";
 import benefitIcon2 from "./benefits/icon-2.svg";
 import benefitIcon3 from "./benefits/icon-3.svg";
 import benefitIcon4 from "./benefits/icon-4.svg";
-import benefitImage1 from "./benefits/image-1.svg";
-import benefitImage2 from "./benefits/image-2.svg";
-import benefitImage3 from "./benefits/image-3.svg";
-import benefitImage4 from "./benefits/image-4.svg";
-import benefitImage5 from "./benefits/image-5.svg";
-import benefitImage6 from "./benefits/image-6.svg";
+import benefitImage1 from "./benefits/image-1.png";
+import benefitImage2 from "./benefits/image-2.png";
+import benefitImage3 from "./benefits/image-3.png";
+import benefitImage4 from "./benefits/image-4.png";
+import benefitImage5 from "./benefits/image-5.png";
+import benefitImage6 from "./benefits/image-6.png";
 
 export {
   benefitCard1,
