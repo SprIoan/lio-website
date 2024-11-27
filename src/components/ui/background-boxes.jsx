@@ -5,8 +5,8 @@ import { cn } from "../../lib/utils";
 
 //eslint-disable-next-line
 export const BoxesCore = ({ className, ...rest }) => {
-  const rows = new Array(26).fill(1);
-  const cols = new Array(27).fill(1);
+  const rows = new Array(24).fill(1);
+  const cols = new Array(24).fill(1);
   let colors = [
     "",
     "--sky-400",
@@ -64,7 +64,7 @@ export const BoxesCore = ({ className, ...rest }) => {
   return (
     <div
       style={{
-        transform: `translate(-20%,34%) scale(1.2) rotate(0deg) translateZ(0)`,
+        transform: `translate(-15%,39.5%) scale(1.33) rotate(0deg) translateZ(0)`,
       }}
       className={cn(
         "absolute left-1/4 p-4 -top-1/4 flex  -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 ",
