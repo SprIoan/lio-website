@@ -54,7 +54,7 @@ const Contact = () => {
 
   return (
     <section
-      className={`pb-20 w-full bg-gradient-to-b from-white dark:from-black to-white/90 dark:to-black/50 pt-10 border-b border-white/20
+      className={`pb-20 w-full bg-gradient-to-b from-white dark:from-purple-900/20 to-white/90 dark:to-black/50 pt-10 border-b border-white/20
         ${theme === "dark" ? "bg-grid" : "bg-grid-light"}`}
       id="contact"
     >

@@ -140,20 +140,8 @@ const Header = () => {
         }
       });
 
-      const onVisionClick = contextSafe(() => {
-        //call onToggleMenu function
-        onToggleMenu();
-        //wait 1 sec
-        setTimeout(() => {
-          window.scrollTo({
-            top: document.getElementById("info").offsetTop,
-            behavior: "smooth",
-          });
-        }, 1000);
-      });
-
       //add event listener
-      visionRef.current.addEventListener("click", onVisionClick);
+      visionRef.current.addEventListener("click", onToggleMenu);
       expertiseRef.current.addEventListener("click", onToggleMenu);
       aboutRef.current.addEventListener("click", onToggleMenu);
       contactRef.current.addEventListener("click", onToggleMenu);
@@ -165,7 +153,7 @@ const Header = () => {
         expertiseRef.current.removeEventListener("click", onToggleMenu);
         aboutRef.current.removeEventListener("click", onToggleMenu);
         contactRef.current.removeEventListener("click", onToggleMenu);
-        visionRef.current.removeEventListener("click", onVisionClick);
+        visionRef.current.removeEventListener("click", onToggleMenu);
       };
     },
     { scope: menuRef }
@@ -206,7 +194,7 @@ const Header = () => {
                 <div className="links">
                   <div className="link">
                     <a
-                      href="#"
+                      href="#vision"
                       ref={visionRef}
                       className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors"
                     >

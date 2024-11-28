@@ -4,7 +4,6 @@ import { cn } from "../lib/utils";
 import Loading from "../components/ui/Loading";
 import { useTheme } from "../ThemeContext";
 import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const AceternityLogo = () => {
