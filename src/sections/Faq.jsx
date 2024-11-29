@@ -12,7 +12,7 @@ const Faq = () => {
       id="about"
       className={`${
         theme === "dark" ? "bg-grid" : "bg-grid-light"
-      } bg-gradient-to-b from-purple-900/30 to-purple-900/20 pb-20`}
+      } bg-gradient-to-b from-gray-200 dark:from-purple-900/30 to-gray-100 dark:to-purple-900/20 pb-20`}
     >
       <div className="max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem] pt-10 lg:mt-0 relative z-2">
         <Heading

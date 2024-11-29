@@ -26,7 +26,7 @@ const FaqItem = ({ item, index }) => {
           </div>
           <div
             className={clsx(
-              "h6 dark:text-p4 transition-colors duration-500 max-md:flex max-md:min-h-20 max-md:items-center",
+              "h6 text-black dark:text-p4 transition-colors duration-500 max-md:flex max-md:min-h-20 max-md:items-center",
               active && "max-lg:text-[#2BBF63]/80"
             )}
           >
@@ -49,7 +49,10 @@ const FaqItem = ({ item, index }) => {
         {/* eslint-disable-next-line */}
         {activeId === item.id && (
           //eslint-disable-next-line
-          <div className="body-3 px-7 py-3.5">{item.answer}</div>
+          <div className="body-3 px-7 py-3.5 text-gray-800 dark:text-[#C3CBF5]">
+            {/* eslint-disable-next-line */}
+            {item.answer}
+          </div>
         )}
       </SlideDown>
 

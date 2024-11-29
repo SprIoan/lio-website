@@ -5,6 +5,7 @@ import { useTheme } from "../ThemeContext";
 import Heading from "./Heading";
 
 const VisionSection = () => {
+  //set LocalStorage isCountFinshed to false
   const [hoveredCard, setHoveredCard] = useState(null);
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
   const cardRefs = useRef([]);
@@ -171,8 +172,7 @@ const VisionSection = () => {
   //eslint-disable-next-line
   const CountUp = ({ end, duration = 2 }) => {
     const [count, setCount] = useState(0);
-    //eslint-disable-next-line
-    const countRef = useRef(null);
+    const isCountFinshed = localStorage.getItem("countFinished") === "true";
     const animationRef = useRef(null);
 
     useEffect(() => {
@@ -189,13 +189,14 @@ const VisionSection = () => {
             requestAnimationFrame(animate);
           } else {
             setCount(end);
+            localStorage.setItem("countFinished", true);
           }
         };
         requestAnimationFrame(animate);
       }
-    }, [end, duration, isVisible]);
+    }, [end, duration]);
 
-    return <>{count}</>;
+    return <>{isCountFinshed === true ? end : count}</>;
   };
 
   return (
@@ -203,7 +204,7 @@ const VisionSection = () => {
       id="vision"
       className={`${
         theme === "dark" ? "bg-grid" : "bg-grid-light"
-      } relative min-h-screen bg-gradient-to-b from-black to-purple-900/20 py-20 lg:pb-44 overflow-hidden`}
+      } relative min-h-screen bg-gradient-to-b from-white dark:from-black to-gray-100 dark:to-purple-900/20 py-20 lg:pb-44 overflow-hidden`}
     >
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -235,7 +236,7 @@ const VisionSection = () => {
                   transition: { duration: 0.6, delay: card.delay },
                 },
               }}
-              className="group relative bg-gray-900/30 backdrop-blur-md rounded-2xl p-8 border border-purple-500/20 transition-all duration-300 overflow-hidden"
+              className="group relative bg-white/30 dark:bg-gray-900/30 backdrop-blur-md rounded-2xl p-8 border border-purple-500/20 transition-all duration-300 overflow-hidden"
               onMouseEnter={() => setHoveredCard(index)}
               onMouseLeave={() => setHoveredCard(null)}
               onMouseMove={(e) => handleMouseMove(e, index)}
@@ -250,7 +251,7 @@ const VisionSection = () => {
                     transition={{ duration: 0.2 }}
                   >
                     <div
-                      className="absolute inset-0 bg-purple-600/5 rounded-2xl"
+                      className="absolute inset-0 bg-purple-6s00/5 rounded-2xl"
                       style={{
                         background: `radial-gradient(circle at ${cursorPosition.x}px ${cursorPosition.y}px, rgba(147, 51, 234, 0.1) 0%, rgba(147, 51, 234, 0) 50%)`,
                       }}
@@ -271,14 +272,14 @@ const VisionSection = () => {
                 >
                   {card.icon}
                 </motion.div>
-                <h3 className="text-xl font-bold text-white mb-4 tracking-wide">
+                <h3 className="text-xl font-bold text-black dark:text-white mb-4 tracking-wide font-sans cursor-default">
                   {card.title}
                 </h3>
-                <p className="text-n-3 text-sm mb-6 leading-relaxed">
+                <p className="text-n-4 dark:text-n-3 text-sm mb-6 leading-relaxed cursor-default font-sans">
                   {card.description}
                 </p>
                 <motion.button
-                  className="flex items-center text-gray-500 hover:text-purple-300 transition-colors duration-300 group"
+                  className="flex !font-code items-center text-gray-900 dark:text-gray-500 hover:text-purple-700 dark:hover:text-purple-300 transition-colors duration-300 group"
                   whileHover={{ x: 3 }}
                   transition={{ type: "spring", stiffness: 500, damping: 25 }}
                 >
@@ -299,11 +300,11 @@ const VisionSection = () => {
           }}
         >
           <div className="inline-flex items-center justify-center p-1 rounded-full bg-purple-800/30 backdrop-blur-sm border border-purple-500/20 mb-12">
-            <span className="px-6 py-2 text-sm text-purple-200 font-medium tracking-wide">
+            <span className="px-6 py-2 text-sm text-purple-800 dark:text-purple-200 font-medium tracking-wide font-sans">
               Innovating for a Brighter Tomorrow
             </span>
           </div>
-          <div className="flex flex-wrap justify-center gap-12">
+          <div className="flex flex-wrap justify-center gap-12 font-sans">
             {[
               { value: "100+", label: "Projects Delivered" },
               { value: "97", label: "Client Satisfaction" },
@@ -322,7 +323,7 @@ const VisionSection = () => {
                   },
                 }}
               >
-                <span className="text-6xl font-bold text-white mb-2 bg-clip-text text-transparent ">
+                <span className="text-6xl font-sans font-bold text-black-100 dark:text-white mb-2 bg-clip-text text-transparent ">
                   {index === 1 ? (
                     <>
                       <CountUp end={97} />%
@@ -335,7 +336,7 @@ const VisionSection = () => {
                     stat.value
                   )}
                 </span>
-                <span className="text-purple-200 text-lg font-medium">
+                <span className="text-purple-800 dark:text-purple-200 text-lg font-medium font-sans">
                   {stat.label}
                 </span>
               </motion.div>

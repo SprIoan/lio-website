@@ -54,7 +54,7 @@
     transform: translateX(-50%);
     bottom: 0;
     background: url("/images/grid.svg") center center/cover no-repeat fixed;
-    opacity: 0.5;
+    opacity: 0.6;
     width: 130vw !important;
     z-index: 0;
   }

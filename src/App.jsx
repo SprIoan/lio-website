@@ -10,6 +10,8 @@ import Benefits from "./sections/Benefits";
 import Faq from "./sections/Faq";
 
 const App = () => {
+  localStorage.setItem("countFinished", false);
+
   return (
     <section id="us" className="overflow-hidden bg-transparent">
       <Header />
