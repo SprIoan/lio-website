@@ -196,7 +196,11 @@ const VisionSection = () => {
       }
     }, [end, duration]);
 
-    return <>{isCountFinshed === true ? end : count}</>;
+    return (
+      <span className="text-black dark:text-white">
+        {isCountFinshed === true ? end : count}
+      </span>
+    );
   };
 
   return (
@@ -326,14 +330,18 @@ const VisionSection = () => {
                 <span className="text-6xl font-sans font-bold text-purple-950 dark:text-white mb-2 bg-clip-text text-transparent ">
                   {index === 1 ? (
                     <>
-                      <CountUp end={97} />%
+                      <CountUp end={97} />
+                      <span className="text-black dark:text-white">%</span>
                     </>
                   ) : index === 0 ? (
                     <>
-                      <CountUp end={100} />+
+                      <CountUp end={100} />
+                      <span className="text-black dark:text-white">+</span>
                     </>
                   ) : (
-                    stat.value
+                    <span className="text-black dark:text-white">
+                      {stat.value}
+                    </span>
                   )}
                 </span>
                 <span className="text-purple-800 dark:text-purple-200 text-lg font-medium font-sans">
