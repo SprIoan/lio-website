@@ -323,7 +323,7 @@ const VisionSection = () => {
                   },
                 }}
               >
-                <span className="text-6xl font-sans font-bold text-black-100 dark:text-white mb-2 bg-clip-text text-transparent ">
+                <span className="text-6xl font-sans font-bold text-purple-950 dark:text-white mb-2 bg-clip-text text-transparent ">
                   {index === 1 ? (
                     <>
                       <CountUp end={97} />%
