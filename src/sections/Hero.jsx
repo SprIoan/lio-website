@@ -4,7 +4,6 @@ import { cn } from "../lib/utils";
 import Loading from "../components/ui/Loading";
 import { useTheme } from "../ThemeContext";
 import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
-import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 const AceternityLogo = () => {
@@ -34,7 +33,7 @@ const Hero = () => {
   useGSAP((context, contextSafe) => {
     const onLearnMore = contextSafe(() => {
       window.scrollTo({
-        top: document.getElementById("info").offsetTop,
+        top: document.getElementById("vision").offsetTop,
         behavior: "smooth",
       });
     });

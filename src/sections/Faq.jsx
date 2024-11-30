@@ -9,13 +9,16 @@ const Faq = () => {
 
   return (
     <section
-      id="faq"
-      className={`${theme === "dark" ? "bg-grid" : "bg-grid-light"}`}
+      id="about"
+      className={`${
+        theme === "dark" ? "bg-grid" : "bg-grid-light"
+      } bg-gradient-to-b from-gray-200 dark:from-purple-900/30 to-gray-100 dark:to-purple-900/20 pb-20`}
     >
       <div className="max-w-[77.5rem] mx-auto px-5 md:px-10 lg:px-15 xl:max-w-[87.5rem] pt-10 lg:mt-0 relative z-2">
         <Heading
           className="md:max-w-md lg:max-w-2xl"
           title="What You Might Want to Know"
+          text="Here are some of the most frequently asked questions. If you have any other questions, please feel free to contact us."
         />
         <div className="faq-line_after w-0.5 h-full absolute left-[calc(50%-1px)] top-0 opacity-15 -z-1 bg-white dark:bg-s2" />
         <div className="faq-glow_before relative z-2  rounded-lg  bg-black/0">
