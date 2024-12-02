@@ -7,39 +7,13 @@ import { cn } from "../../lib/utils";
 export const BoxesCore = ({ className, ...rest }) => {
   const rows = new Array(24).fill(1);
   const cols = new Array(24).fill(1);
-  let colors = [
-    "",
-    "--sky-400",
-    "--pink-400",
-    "--green-400",
-    "--yellow-400",
-    "--red-400",
-    "--purple-400",
-    "--blue-400",
-    "--indigo-400",
-    "--violet-400",
-    "--sky-400",
-    "--pink-400",
-    "--green-400",
-    "--yellow-400",
-    "--red-400",
-    "--purple-400",
-    "--blue-400",
-    "--indigo-400",
-    "--violet-400",
-  ];
+  let colors = ["--box-2", "--red-500", "--box-2", "--red-500", ""];
 
-  const colors2 = [
-    "--sky-400",
-    "--pink-400",
-    "--green-400",
-    "--yellow-400",
-    "--red-400",
-    "--purple-400",
-    "--blue-400",
-    "--indigo-400",
-    "--violet-400",
-  ];
+  const colors2 = ["--box-2", "--red-500"];
+
+  // let colors = ["--green-400", "--red-400", "--green-400", "--red-400", ""];
+
+  // const colors2 = ["--green-400", "--red-400"];
 
   const screenSize = window.innerWidth;
   let screen_limit = 22;
@@ -67,7 +41,7 @@ export const BoxesCore = ({ className, ...rest }) => {
         transform: `translate(-15%,39.5%) scale(1.33) rotate(0deg) translateZ(0)`,
       }}
       className={cn(
-        "absolute left-1/4 p-4 -top-1/4 flex  -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 ",
+        "absolute left-1/4 p-4 -top-1/4 flex  -translate-x-1/2 -translate-y-1/2 w-full h-full z-0 bg-gray-700",
         className
       )}
       {...rest}
@@ -75,7 +49,7 @@ export const BoxesCore = ({ className, ...rest }) => {
       {rows.map((_, i) => (
         <motion.div
           key={`row` + i}
-          className="w-16 h-8  border-l  border-slate-700 relative"
+          className="w-16 h-8  border-l bg-white  border-slate-700 relative"
         >
           {cols.map((_, j) => (
             <motion.div
@@ -87,11 +61,11 @@ export const BoxesCore = ({ className, ...rest }) => {
                 duration: 2.5,
               }}
               whileHover={{
-                backgroundColor: `${"#D3D3D3"}`,
+                backgroundColor: `${"white"}`,
                 transition: { duration: 0 },
               }}
               whileTap={{
-                backgroundColor: `${"lightgray"}`,
+                backgroundColor: `${"white"}`,
                 transition: { duration: 0 },
               }}
               key={`col` + j}
