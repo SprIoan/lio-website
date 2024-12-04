@@ -173,10 +173,16 @@ const Header = () => {
               ref={toggleRef}
               className="flex justify-center items-center cursor-pointer"
             >
-              <div className="menu-toggle-icon">
+              <div className="menu-toggle-icon bg-white dark:bg-purple-400">
                 <div className="hamburger">
-                  <div className="menu-bar" data-position="top"></div>
-                  <div className="menu-bar" data-position="bottom"></div>
+                  <div
+                    className="menu-bar bg-black dark:bg-white transition-colors"
+                    data-position="top"
+                  ></div>
+                  <div
+                    className="menu-bar bg-black dark:bg-white transition-colors"
+                    data-position="bottom"
+                  ></div>
                 </div>
               </div>
               <div className="menu-copy">
@@ -184,7 +190,7 @@ const Header = () => {
               </div>
             </div>
 
-            <div className="menu bg-[#DDB888] dark:bg-[#0f0f0f] transition-colors duration-1000">
+            <div className="menu bg-[#31DC72] dark:bg-[#0f0f0f] transition-colors duration-1000">
               <div className="col col-1 ">
                 <div className="menu-logo mr-auto relative">
                   <Logo />
@@ -196,7 +202,7 @@ const Header = () => {
                     <a
                       href="#vision"
                       ref={visionRef}
-                      className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors"
+                      className="hover:text-black focus:text-black dark:hover:text-purple-300 dark:focus:text-purple-300transition-colors"
                     >
                       Vision
                     </a>
@@ -205,7 +211,7 @@ const Header = () => {
                     <a
                       href="#expertise"
                       ref={expertiseRef}
-                      className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors"
+                      className="hover:text-black focus:text-black dark:hover:text-purple-300 dark:focus:text-purple-300 transition-colors"
                     >
                       Expertise
                     </a>
@@ -214,7 +220,7 @@ const Header = () => {
                     <a
                       href="#about"
                       ref={aboutRef}
-                      className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors"
+                      className="hover:text-black focus:text-black dark:hover:text-purple-300 dark:focus:text-purple-300 transition-colors"
                     >
                       About
                     </a>
@@ -223,7 +229,7 @@ const Header = () => {
                     <a
                       href="#contact"
                       ref={contactRef}
-                      className="hover:text-black focus:text-black dark:hover:text-[#DDB888] dark:focus:text-[#DDB888] transition-colors"
+                      className="hover:text-black focus:text-black dark:hover:text-purple-300 dark:focus:text-purple-300 transition-colors"
                     >
                       Contact
                     </a>
