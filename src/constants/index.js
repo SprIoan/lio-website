@@ -67,62 +67,51 @@ export const benefits = [
 export const faq = [
   {
     id: "0",
-    question: "How easy is it to setup Lio?",
+    question: "How can I prepare my company for digital transformation?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "We assess your current processes, recommend the right technologies, develop customized software, and provide strategic guidance to ensure a smooth transition.",
   },
   {
     id: "1",
-    question: "Can I integrate Lio with other platforms?",
+    question: "What steps can I take to embrace innovation?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "We offer R&D-driven solutions, help integrate emerging technologies, and create tailored software to enhance innovation within your organization",
   },
   {
     id: "2",
-    question: "How often do you add new content?",
+    question: "Why is technology guidance important?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "Our experts provide ongoing tech consultancy, helping you navigate complex decisions, adopt best practices, and implement scalable solutions.",
   },
   {
     id: "3",
-    question: "What your refund policy?",
+    question: "How do new systems provide valuable insights?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "Our AI-powered analytics and automation solutions extract meaningful insights from your data, enabling smarter decision-making.",
   },
   {
     id: "4",
-    question: "Do you have corporate plans?",
+    question: "Can I migrate my existing data securely and efficiently?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "We specialize in secure data migration strategies, ensuring encryption, compliance, and seamless integration with new systems.",
   },
   {
     id: "5",
-    question: "What happens when I’m out of storage?",
+    question:
+      "I want to drive disruption. How can your expertise support this?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "We design and develop cutting-edge solutions, leveraging disruptive technologies such as AI, IoT, and blockchain to transform your business",
   },
   {
     id: "6",
-    question: "Can I upgrade my plan?",
+    question: "How can I effectively coordinate and manage all these systems?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "To ensure seamless coordination and management, we provide comprehensive support, including SWOT analysis to identify strengths and opportunities, optimized workflows for streamlined operations, and project management training and tools based on agile methodologies. Our expertise helps you implement efficient strategies, improve collaboration, and adapt to evolving business needs with agility.",
   },
   {
     id: "7",
-    question: "How do I invite my team?",
+    question: "What support do you offer for team collaboration?",
     answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
-  },
-  {
-    id: "8",
-    question: "Do you offer training for individuals and teams?",
-    answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
-  },
-  {
-    id: "9",
-    question: "I’m locked out of my account what do I do?",
-    answer:
-      "Absolutely! Not only you can upgrade your plan at any time but you also get a prorated discount giving you maximum value for your subscription.",
+      "We provide tools and strategies to enhance team collaboration, including project management platforms, communication tools, and training sessions designed to foster productivity and alignment across teams.",
   },
 ];

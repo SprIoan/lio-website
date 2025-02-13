@@ -254,7 +254,7 @@ const Header = () => {
                     <p>Greece</p>
                     <br />
                     <p>info@lio-tech.gr</p>
-                    <p>job@lio.gr</p>
+                    {/* Add Here */}
                   </div>
                   <div className="sub-col">
                     <p>Instagram</p>
@@ -262,7 +262,7 @@ const Header = () => {
                     <p>LinkedIn</p>
                     <p>Twitter</p>
                     <br />
-                    <p>210 9999000</p>
+                    {/* Add Here */}
                   </div>
                 </div>
                 <div className="header hidden lg:flex">

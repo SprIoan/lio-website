@@ -20,7 +20,7 @@ const Contact = () => {
     // the transfromation of the copy icon to a checkmark
 
     if (copyBtnNo === 1) {
-      navigator.clipboard.writeText("test@test.com");
+      navigator.clipboard.writeText("info@lio-tech.eu");
       const copyIcon = document.querySelector(".copyIcon1a");
       copyIcon.src = "/images/checkmark.svg";
       const copyIcon2 = document.querySelector(".copyIcon1b");
@@ -71,7 +71,7 @@ const Contact = () => {
             className="w-1/2 ml-16 sm:ml-32 lg:ml-3 mt-2 flex dark:hidden"
           />
           <div className="relative mt-16 flex flex-col justify-center group px-6 py-4 rounded-3xl w-[90%] bg-white/75 dark:bg-black/15 shadow-sm  hover:bg-white dark:hover:bg-black/40 transition-colors">
-            <a href="mailto:test@test.com">
+            <a href="mailto:info@lio-tech.eu">
               <img
                 src="/images/chat.svg"
                 alt="chat"
@@ -85,8 +85,8 @@ const Contact = () => {
               Our friendly team is here to help
             </p>
             <p className="text-xs mt-5 font-semibold text-gray-500 dark:text-gray-300">
-              test<span className="hidden">NoSpam</span>@
-              <span className="hidden">NoSpam</span>test.com
+              info<span className="hidden">NoSpam</span>@
+              <span className="hidden">NoSpam</span>lio-tech.eu
             </p>
             <img
               src="/images/copy-dark.svg"
@@ -130,39 +130,6 @@ const Contact = () => {
               onClick={() => handleCopy(2)}
             />
           </div>
-          <div className="mt-6 relative flex flex-col justify-center group px-6 py-4  rounded-3xl w-[90%] bg-white/75 dark:bg-black/15 shadow-sm hover:bg-white dark:hover:bg-black/40 transition-colors">
-            <a href="tel:+301234567890">
-              <img
-                src="/images/phone.svg"
-                alt="chat"
-                className="w-8 h-8 p-2  rounded-xl absolute top-3 right-4 bg-[#46e482] dark:bg-[#613594] group-hover:bg-[#2BBF63] dark:group-hover:bg-[#904edb]  transition-colors"
-              />
-            </a>
-            <h1 className="text-lg font-semibold text-black dark:text-white">
-              Call us
-            </h1>
-            <p className="text-xs mt-3 text-gray-600 dark:text-gray-400">
-              Mon-Fri from 9am to 5pm
-            </p>
-            <p className="text-xs mt-5 font-semibold text-gray-500 dark:text-gray-300">
-              <p>
-                {" "}
-                +30 <span className="hidden">NoSpam</span>123 456 789 0
-              </p>{" "}
-            </p>
-            <img
-              src="/images/copy-dark.svg"
-              alt="copy"
-              className="hidden dark:flex copyIcon3a absolute right-6 bottom-4 cursor-pointer hover:scale-110 transition-transform"
-              onClick={() => handleCopy(3)}
-            />
-            <img
-              src="/images/copy-light.svg"
-              alt="copy"
-              className="flex dark:hidden copyIcon3b absolute right-6 bottom-4 cursor-pointer hover:scale-110 transition-transform"
-              onClick={() => handleCopy(3)}
-            />
-          </div>
         </div>
 
         <div className="w-fit relative right-0 xl:-right-12 border bg-[#30dc72] dark:bg-purple-500/50 h-full rounded-[50px] p-10 py-16 mt-10 lg:mt-0">
@@ -197,7 +164,7 @@ const Contact = () => {
                   onChange={() => setChecked1(!checked1)}
                 />
                 <span className="text-sm text-black dark:text-white">
-                  Website Design
+                  Software Development
                 </span>
               </div>
               <div className="flex gap-3  justify-start items-center">
@@ -206,7 +173,7 @@ const Contact = () => {
                   onChange={() => setChecked2(!checked2)}
                 />
                 <span className="text-sm text-black dark:text-white">
-                  UX Design
+                  Digital Transformation, Strategy and Consulting
                 </span>
               </div>
               <div className="flex gap-3 justify-start items-center">
@@ -215,7 +182,7 @@ const Contact = () => {
                   onChange={() => setChecked3(!checked3)}
                 />
                 <span className="text-sm   text-black dark:text-white">
-                  Technical Guidance
+                  Research-related Projects
                 </span>
               </div>
               <div className="flex gap-3  justify-start items-center">
@@ -224,22 +191,13 @@ const Contact = () => {
                   onChange={() => setChecked4(!checked4)}
                 />
                 <span className="text-sm text-black dark:text-white">
-                  AI Models
+                  Technical Guidance
                 </span>
               </div>
               <div className="flex gap-3   justify-start items-center">
                 <CustomCheckbox
                   checked={checked5}
                   onChange={() => setChecked5(!checked5)}
-                />
-                <span className="text-sm text-black dark:text-white">
-                  Strategy & consulting
-                </span>
-              </div>
-              <div className="flex gap-3 min-w-40 justify-start items-center">
-                <CustomCheckbox
-                  checked={checked6}
-                  onChange={() => setChecked6(!checked6)}
                 />
                 <span className="text-sm text-black dark:text-white">
                   Other
