@@ -78,9 +78,9 @@ const VisionSection = () => {
           />
         </svg>
       ),
-      title: "Innovative Solutions",
+      title: "Future-Ready Technology Systems",
       description:
-        "Pushing boundaries with cutting-edge technology and creative problem-solving approaches.",
+        "Building scalable, adaptable solutions that evolve seamlessly and effortlessly with your unique and continuously growing business needs.",
       delay: 0.2,
     },
     {
@@ -120,9 +120,9 @@ const VisionSection = () => {
           />
         </svg>
       ),
-      title: "Precision Excellence",
+      title: "Technology & Innovation Strategy",
       description:
-        "Delivering unparalleled quality through meticulous attention to detail and unwavering commitment.",
+        "Provide expert guidance on adopting emerging technologies and innovative methodologies to drive sustainable business growth.",
       delay: 0.4,
     },
     {
@@ -162,9 +162,9 @@ const VisionSection = () => {
           />
         </svg>
       ),
-      title: "Future-Ready Systems",
+      title: "R&D for Disruptive Innovation",
       description:
-        "Building scalable, adaptable solutions that evolve seamlessly with your growing business needs.",
+        "Conduct cutting-edge research and development to create groundbreaking solutions that challenge conventional approaches",
       delay: 0.6,
     },
   ];

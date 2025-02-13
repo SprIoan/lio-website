@@ -253,7 +253,7 @@ const Header = () => {
                     <p>10446 Athens</p>
                     <p>Greece</p>
                     <br />
-                    <p>contact@lio.gr</p>
+                    <p>info@lio-tech.gr</p>
                     <p>job@lio.gr</p>
                   </div>
                   <div className="sub-col">
