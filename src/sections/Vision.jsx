@@ -208,7 +208,7 @@ const VisionSection = () => {
       id="vision"
       className={`${
         theme === "dark" ? "bg-grid" : "bg-grid-light"
-      } relative min-h-screen bg-gradient-to-b from-white dark:from-black to-gray-100 dark:to-purple-900/20 py-20 lg:pb-44 overflow-hidden`}
+      } relative min-h-screen bg-gradient-to-b from-white dark:from-purple-900/10 to-gray-100 dark:to-purple-900/20 py-20 lg:pb-44 overflow-hidden`}
     >
       <div className="container mx-auto px-4 relative z-10">
         <motion.div
@@ -282,14 +282,16 @@ const VisionSection = () => {
                 <p className="text-n-4 dark:text-n-3 text-sm mb-6 leading-relaxed cursor-default font-sans">
                   {card.description}
                 </p>
-                <motion.button
-                  className="flex !font-code items-center text-gray-900 dark:text-gray-500 hover:text-purple-700 dark:hover:text-purple-300 transition-colors duration-300 group"
-                  whileHover={{ x: 3 }}
-                  transition={{ type: "spring", stiffness: 500, damping: 25 }}
-                >
-                  Explore Further
-                  <ArrowRight className="w-5 h-5 ml-2" />
-                </motion.button>
+                <a href="#expertise">
+                  <motion.button
+                    className="flex !font-code items-center text-gray-900 dark:text-gray-500 hover:text-purple-700 dark:hover:text-purple-300 transition-colors duration-300 group"
+                    whileHover={{ x: 3 }}
+                    transition={{ type: "spring", stiffness: 500, damping: 25 }}
+                  >
+                    Explore Further
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </motion.button>
+                </a>
               </div>
             </motion.div>
           ))}

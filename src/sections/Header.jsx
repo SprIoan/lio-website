@@ -17,6 +17,7 @@ const Header = () => {
   const { theme } = useTheme();
   const isAnimating = useRef(false);
 
+  const teamRef = useRef();
   const visionRef = useRef();
   const expertiseRef = useRef();
   const aboutRef = useRef();
@@ -141,6 +142,7 @@ const Header = () => {
       });
 
       //add event listener
+      teamRef.current.addEventListener("click", onToggleMenu);
       visionRef.current.addEventListener("click", onToggleMenu);
       expertiseRef.current.addEventListener("click", onToggleMenu);
       aboutRef.current.addEventListener("click", onToggleMenu);
@@ -149,10 +151,12 @@ const Header = () => {
 
       return () => {
         //remove event listener
+
         toggleRef.current.removeEventListener("click", onToggleMenu);
         expertiseRef.current.removeEventListener("click", onToggleMenu);
         aboutRef.current.removeEventListener("click", onToggleMenu);
         contactRef.current.removeEventListener("click", onToggleMenu);
+        teamRef.current.removeEventListener("click", onToggleMenu);
         visionRef.current.removeEventListener("click", onToggleMenu);
       };
     },
@@ -198,6 +202,15 @@ const Header = () => {
                 </div>
 
                 <div className="links">
+                  <div className="link">
+                    <a
+                      href="#team"
+                      ref={teamRef}
+                      className="hover:text-black focus:text-black dark:hover:text-purple-300 dark:focus:text-purple-300transition-colors"
+                    >
+                      Team
+                    </a>
+                  </div>
                   <div className="link">
                     <a
                       href="#vision"

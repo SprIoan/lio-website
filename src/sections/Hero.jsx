@@ -33,7 +33,7 @@ const Hero = () => {
   useGSAP((context, contextSafe) => {
     const onLearnMore = contextSafe(() => {
       window.scrollTo({
-        top: document.getElementById("vision").offsetTop,
+        top: document.getElementById("team").offsetTop,
         behavior: "smooth",
       });
     });

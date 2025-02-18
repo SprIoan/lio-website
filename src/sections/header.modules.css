@@ -158,7 +158,8 @@
 .links {
     display: flex;
     flex-direction: column;
-    gap:0.5vh;
+    gap:0.1vh;
+    margin-top: -5vh;
 
 }
 
@@ -172,7 +173,7 @@
 .link a {
     text-decoration: none;
     color: #fff;
-    font-size: 54px;
+    font-size: 50px;
     font-weight: 300;
     letter-spacing: -1.5px;
     line-height: 125%;
@@ -266,15 +267,15 @@
     }
 
     .links {
-        margin-top: 1vh;
+        margin-top: -2vh;
         display: flex;
         flex-direction: column;
-        gap:2.5vh;
+        gap:1.5vh;
     }
 
     .video-wrapper {
         position: absolute;
-        bottom: 8vh;
+        bottom: 3vh;
         margin: auto;
         width: 90vw
     }

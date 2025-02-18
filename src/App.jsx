@@ -6,6 +6,7 @@ const Contact = lazy(() => import("./sections/Contact"));
 const Footer = lazy(() => import("./sections/Footer"));
 
 import Vision from "./sections/Vision";
+import Team from "./sections/Team";
 import Benefits from "./sections/Benefits";
 import Faq from "./sections/Faq";
 
@@ -16,6 +17,7 @@ const App = () => {
     <section id="us" className="overflow-hidden bg-transparent">
       <Header />
       <Hero />
+      <Team />
       <Vision />
       <Benefits />
       <Faq />

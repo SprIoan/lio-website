@@ -9,6 +9,7 @@ import { useTheme } from "../ThemeContext";
 
 const Benefits = () => {
   const { theme } = useTheme();
+
   return (
     <section
       id="expertise"
@@ -45,10 +46,15 @@ const Benefits = () => {
                     alt={item.title}
                     className="!w-[48px] !h-[48px] mr-3"
                   />
-                  <p className="ml-auto !font-code text-xs font-bold text-black/90 dark:text-n-1 uppercase tracking-wider z-3">
+                  <a
+                    href="#contact"
+                    className="ml-auto !font-code text-xs font-bold text-black/90 dark:text-n-1 uppercase tracking-wider z-3 pointer-events-auto"
+                  >
                     Explore more
-                  </p>
-                  <Arrow />
+                  </a>
+                  <a href="#contact" className="pointer-events-auto">
+                    <Arrow />
+                  </a>
                 </div>
               </div>
 
