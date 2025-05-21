@@ -19,7 +19,7 @@ const Team = () => {
       />
       <div className="container grid grid-cols-1 lg:grid-cols-3 gap-4 max-w-7xl mx-auto w-full">
         <WobbleCard
-          containerClassName="col-span-1 lg:col-span-2 h-full bg-[#CC3B3C] min-h-[500px] lg:min-h-[300px]"
+          containerClassName="col-span-1 lg:col-span-2 h-full bg-red-800 min-h-[500px] lg:min-h-[300px]"
           className=""
         >
           <div className="max-w-xs relative bottom-6">
@@ -53,7 +53,7 @@ const Team = () => {
             solutions through structured innovation processes.
           </p>
         </WobbleCard>
-        <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-[#c084fc] min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
+        <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-purple-900 min-h-[500px] lg:min-h-[600px] xl:min-h-[300px]">
           <div className="max-w-sm relative bottom-6">
             <h2 className="max-w-sm md:max-w-lg  text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
               Business Transformation Experts

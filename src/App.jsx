@@ -1,7 +1,8 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 
 import Header from "./sections/Header";
 import Hero from "./sections/Hero";
+import CookieConsent from "./sections/CookieConsent";
 const Contact = lazy(() => import("./sections/Contact"));
 const Footer = lazy(() => import("./sections/Footer"));
 
@@ -21,8 +22,11 @@ const App = () => {
       <Vision />
       <Benefits />
       <Faq />
-      <Contact />
-      <Footer />
+      <Suspense fallback={<div>Loading...</div>}>
+        <Contact />
+        <Footer />
+      </Suspense>
+      <CookieConsent />
     </section>
   );
 };
