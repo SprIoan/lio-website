@@ -25,7 +25,7 @@ const Faq = () => {
           <div className="container flex gap-10 max-lg:block">
             <div className="rounded-half absolute -top-10 left-[calc(50%-40px)] z-4 flex size-20 items-center justify-center border-2 border-white dark:border-s2 bg-white dark:bg-s1">
               <img
-                src="/images/cherry3.svg"
+                src="/images/cherry.svg"
                 alt="logo"
                 className="!w-[70%] !h-[70%]"
               />

@@ -208,7 +208,7 @@ const VisionSection = () => {
       id="vision"
       className={`${
         theme === "dark" ? "bg-grid" : "bg-grid-light"
-      } relative min-h-screen bg-gradient-to-b from-white dark:from-purple-900/10 to-gray-100 dark:to-purple-900/20 py-20 lg:pb-44 overflow-hidden`}
+      } relative min-h-screen bg-gradient-to-b from-gray-100 dark:from-purple-900/10 to-gray-100 dark:to-purple-900/20 py-20 lg:pb-44 overflow-hidden`}
     >
       <div className="container mx-auto px-4 relative z-10">
         <motion.div

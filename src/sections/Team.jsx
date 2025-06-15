@@ -10,7 +10,7 @@ const Team = () => {
       id="team"
       className={`${
         theme === "dark" ? "bg-grid" : "bg-grid-light"
-      } relative min-h-screen bg-gradient-to-b from-white dark:from-black  px-4 to-gray-100 dark:to-purple-900/10 py-20 lg:pb-44 overflow-hidden`}
+      } relative min-h-screen bg-gradient-to-b from-gray-100 dark:from-black  px-4 to-gray-100 dark:to-purple-900/10 py-20 lg:pb-44 overflow-hidden`}
     >
       <Heading
         className="md:max-w-md lg:max-w-2xl text-center"
