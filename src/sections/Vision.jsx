@@ -312,7 +312,7 @@ const VisionSection = () => {
           </div>
           <div className="flex flex-wrap justify-center gap-12 font-sans">
             {[
-              { value: "100+", label: "Projects Delivered" },
+              { value: "20+", label: "Projects Delivered" },
               { value: "97", label: "Client Satisfaction" },
               { value: "24/7", label: "Expert Support" },
             ].map((stat, index) => (
