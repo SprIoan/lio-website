@@ -337,7 +337,7 @@ const VisionSection = () => {
                     </>
                   ) : index === 0 ? (
                     <>
-                      <CountUp end={100} />
+                      <CountUp end={20} />
                       <span className="text-black dark:text-white">+</span>
                     </>
                   ) : (
