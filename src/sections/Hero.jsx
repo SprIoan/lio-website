@@ -5,6 +5,7 @@ import Loading from "../components/ui/Loading";
 import { useTheme } from "../ThemeContext";
 import { HoverBorderGradient } from "../components/ui/hover-border-gradient";
 import { useGSAP } from "@gsap/react";
+import Marquee from "../components/Marquee";
 
 const AceternityLogo = () => {
   return (
@@ -91,6 +92,7 @@ const Hero = () => {
             </a>
           </HoverBorderGradient>
         </div>
+        <Marquee />
       </div>
     </Suspense>
   );
